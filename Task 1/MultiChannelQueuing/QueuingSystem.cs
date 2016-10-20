@@ -15,7 +15,7 @@ namespace MultiChannelQueuing
         public static List<Time> interArrivalTime = new List<Time>(Program.theForm.systemDGV.Rows.Count);// probability table (slide 34)
         public static List<Server> servers = new List<Server>();// our servers.
         public List<Customer> customersList = new List<Customer>();
-
+        int[] queueArray;// number of customers in queue at every given time.
         static Random R = new Random();//For randomly selecting the server.
 
         public void SetInterArrivalProbabilityTable( )
@@ -166,31 +166,27 @@ namespace MultiChannelQueuing
 
         public int QueueLength(int simulaionSize)
         {
+            queueArray = new int[customersList[simulaionSize - 1].GetServiceEnd()];
             int maxOverlap = 0, currentOverlap = 0;
-            int j = 0;
-            List<int> startTime = new List<int>(simulaionSize), endTime = new List<int>(simulaionSize);   
-            for (int z = 0; z < simulaionSize; z++)
-            {
-                startTime.Add(customersList[z].GetArrivalTime());
-                endTime.Add(customersList[z].GetServiceBegin());
+            int previous = 0, idx = 0;
+            List<Tuple<int,int>> pointsOfTime = new List<Tuple<int,int>>(simulaionSize);
+            for (int j = 0; j < simulaionSize; j++){
+            Tuple<int,int> pair=new Tuple<int,int>(customersList[j].GetArrivalTime(),1);
+            pointsOfTime.Add(pair);
+            Tuple<int, int> pair2 = new Tuple<int, int>(customersList[j].GetServiceBegin(), -1);
+            pointsOfTime.Add(pair2);
             }
-            endTime.Sort();
-            int i = 0;
-            while (i < startTime.Count && j < endTime.Count)
-            {
-                if (startTime[i] < endTime[j])
-                {
-                    currentOverlap++;
-                    maxOverlap = Math.Max(maxOverlap, currentOverlap);
-                    i++;
-                }
-                else
-                {
-                    currentOverlap--;
-                    j++;
-                }
+            pointsOfTime.Sort();
+            while(idx < pointsOfTime.Count){
+            while(previous < pointsOfTime[idx].Item1){
+                queueArray[previous++] = currentOverlap;
             }
-            return maxOverlap;
+            currentOverlap += pointsOfTime[idx].Item2;
+            maxOverlap = Math.Max(maxOverlap, currentOverlap);
+            idx++;
+    }
+    return maxOverlap;
+
         }
     }
 }
