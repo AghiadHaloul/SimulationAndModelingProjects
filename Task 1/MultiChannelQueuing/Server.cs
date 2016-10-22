@@ -11,8 +11,11 @@ namespace MultiChannelQueuing
         int customersServed = 0;
         double serviceTimesSum = 0;
         double averageServiceTime;
-        
-        public Server(){}
+
+        public static int counter = 0;
+        public Server(){
+            counter++;
+        }
         public void SetServer()
         {//Load from datagrid into a list
             DataGridView data = null;

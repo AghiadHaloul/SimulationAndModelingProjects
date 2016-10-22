@@ -28,16 +28,18 @@ namespace MultiChannelQueuing
         {
             gridName.Rows.Add(ID, val);
         }
-
+        
         private void CloseForm_Click(object sender, EventArgs e)
         {
             outputDataGrid.Rows.Clear();
             this.Dispose();
+        
         }
 
         private void ViewChartsBTN_Click(object sender, EventArgs e)
         {
             //TODO: Implement the charting module using ZedGraph or the standard C# charting library.
+            Program.MainCharts.Show();
         }
 
         private void SimulationTable_Load(object sender, EventArgs e)

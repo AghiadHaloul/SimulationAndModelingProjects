@@ -11,11 +11,11 @@ namespace MultiChannelQueuing
         int maxQueue = 0;// Maximum Number of people in the queue during the simulation.
         double queuedCustomersCounter = 0;//Total number of customers that has been queued. To be used in calculating the probability of entering the queue.
         public int serverSelectionMode = 0;// 0 : higest priority, 1 : random, 2 : least utilization.
-
+        public static int maxDelay = -1;
         public static List<Time> interArrivalTime = new List<Time>(Program.theForm.systemDGV.Rows.Count);// probability table (slide 34)
         public static List<Server> servers = new List<Server>();// our servers.
         public List<Customer> customersList = new List<Customer>();
-        int[] queueArray;// number of customers in queue at every given time.
+        public static int[] queueArray;// number of customers in queue at every given time.
         static Random R = new Random();//For randomly selecting the server.
 
         public void SetInterArrivalProbabilityTable( )
@@ -141,7 +141,7 @@ namespace MultiChannelQueuing
                 T.SetDelay(T.GetServiceBegin() - T.GetArrivalTime());//Delay
                 queueWaitingTime += T.GetDelay();
                 if (T.GetDelay() != 0) queuedCustomersCounter++;
-
+                maxDelay = Math.Max(T.GetDelay(), maxDelay);
                 servers[T.GetServerIndex()].SetTimeServiceEnds(T.GetServiceEnd());//update server's serviceTimeEnding
                 
                 customersList.Add(T);
