@@ -80,9 +80,12 @@ C:\Users\AbdelrahmanOthman\Desktop\MultiChannelQueueSimulation\Task 1\MultiChann
 C:\Users\AbdelrahmanOthman\Desktop\MultiChannelQueueSimulation\Task 1\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
 C:\Users\AbdelrahmanOthman\Desktop\MultiChannelQueueSimulation\Task 1\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
 C:\Users\AbdelrahmanOthman\Desktop\MultiChannelQueueSimulation\Task 1\MultiChannelQueuing\obj\Debug\MultiChannelQueuing.csprojResolveAssemblyReference.cache
+<<<<<<< HEAD
 D:\University\Archive\Seventh Term\06-Simulation and Modeling\Delivered Task 1\MultiChannelQueueSimulation-master\Task 1\MultiChannelQueuing\bin\Debug\Task1Simulation.exe.config
 D:\University\Archive\Seventh Term\06-Simulation and Modeling\Delivered Task 1\MultiChannelQueueSimulation-master\Task 1\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
 D:\University\Archive\Seventh Term\06-Simulation and Modeling\Delivered Task 1\MultiChannelQueueSimulation-master\Task 1\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
 C:\Users\Ghido\Google Drive\Seventh Term\06-Simulation and Modeling\Delivered Task 1\MultiChannelQueueSimulation-master\Task 1\MultiChannelQueuing\bin\Debug\Task1Simulation.exe.config
 C:\Users\Ghido\Google Drive\Seventh Term\06-Simulation and Modeling\Delivered Task 1\MultiChannelQueueSimulation-master\Task 1\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
 C:\Users\Ghido\Google Drive\Seventh Term\06-Simulation and Modeling\Delivered Task 1\MultiChannelQueueSimulation-master\Task 1\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
+=======
+>>>>>>> origin/master
