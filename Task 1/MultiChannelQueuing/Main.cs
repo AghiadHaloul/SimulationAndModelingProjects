@@ -48,8 +48,9 @@ namespace MultiChannelQueuing
             simulationScale = Convert.ToInt32(textBox1.Text);
             simulation.LaunchSimulation(Convert.ToInt32(textBox1.Text),serversList);
             
-            Program.simulationTableForm.Show();
+           Program.simulationTableForm.Show();
            button1.Enabled = false;
+            //this.Hide();
         }
         public static void updateStats(string avgQueueTime, string maxQueue, string queueProb)
         {

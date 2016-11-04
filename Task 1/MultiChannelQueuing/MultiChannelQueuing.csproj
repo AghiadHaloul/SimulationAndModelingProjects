@@ -48,6 +48,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="Tao.OpenGl, Version=2.1.0.12, Culture=neutral, PublicKeyToken=1ca010269a4501ef" />
     <Reference Include="Tao.Platform.Windows, Version=1.0.0.5, Culture=neutral, PublicKeyToken=701104b2da67a104" />
+    <Reference Include="ZedGraph">
+      <HintPath>..\..\..\..\Documents\Simulation-Tasks-Ver2\Simulation Tasks Ver2\Task 1\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
@@ -57,11 +60,11 @@
     <Compile Include="SimulationTable.Designer.cs">
       <DependentUpon>SimulationTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="graphs.cs">
+    <Compile Include="Charts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="graphs.Designer.cs">
-      <DependentUpon>graphs.cs</DependentUpon>
+    <Compile Include="Charts.Designer.cs">
+      <DependentUpon>Charts.cs</DependentUpon>
     </Compile>
     <Compile Include="QueuingSystem.cs" />
     <Compile Include="Server.cs" />
@@ -80,8 +83,8 @@
     <EmbeddedResource Include="SimulationTable.resx">
       <DependentUpon>SimulationTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="graphs.resx">
-      <DependentUpon>graphs.cs</DependentUpon>
+    <EmbeddedResource Include="Charts.resx">
+      <DependentUpon>Charts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

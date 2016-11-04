@@ -10,7 +10,7 @@ namespace MultiChannelQueuing
     {
         public static Main theForm = new Main();
         public static SimulationTable simulationTableForm = new SimulationTable();
-
+        public static Charts MainCharts = new Charts();
         // static Form1 theForm = new Form1();
         /// <summary>
         /// The main entry point for the application.

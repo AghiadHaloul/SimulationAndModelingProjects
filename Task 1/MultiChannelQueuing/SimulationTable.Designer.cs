@@ -28,13 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.outputDataGrid = new System.Windows.Forms.DataGridView();
+            this.customerNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InterArrivalRandomValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.interArrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.arrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serverIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeServiceBegins = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ServiceDurationRandomValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeServiceEnds = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDelay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -52,18 +56,7 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ServerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Average = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CloseForm = new System.Windows.Forms.Button();
             this.ViewChartsBTN = new System.Windows.Forms.Button();
-            this.totalDelay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeServiceEnds = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serviceDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ServiceDurationRandomValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeServiceBegins = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.serverIndex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.arrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.interArrivalTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InterArrivalRandomValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.outputDataGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -94,8 +87,70 @@
             this.outputDataGrid.ReadOnly = true;
             this.outputDataGrid.RowHeadersVisible = false;
             this.outputDataGrid.RowTemplate.ReadOnly = true;
-            this.outputDataGrid.Size = new System.Drawing.Size(825, 685);
+            this.outputDataGrid.Size = new System.Drawing.Size(825, 631);
             this.outputDataGrid.TabIndex = 1;
+            // 
+            // customerNo
+            // 
+            this.customerNo.HeaderText = "Customer Number";
+            this.customerNo.Name = "customerNo";
+            this.customerNo.ReadOnly = true;
+            // 
+            // InterArrivalRandomValue
+            // 
+            this.InterArrivalRandomValue.HeaderText = "Inter-Arrival Random Value";
+            this.InterArrivalRandomValue.Name = "InterArrivalRandomValue";
+            this.InterArrivalRandomValue.ReadOnly = true;
+            // 
+            // interArrivalTime
+            // 
+            this.interArrivalTime.HeaderText = "Inter-Arrival Time";
+            this.interArrivalTime.Name = "interArrivalTime";
+            this.interArrivalTime.ReadOnly = true;
+            // 
+            // arrivalTime
+            // 
+            this.arrivalTime.HeaderText = "Arrival Time";
+            this.arrivalTime.Name = "arrivalTime";
+            this.arrivalTime.ReadOnly = true;
+            // 
+            // serverIndex
+            // 
+            this.serverIndex.HeaderText = "Server Index";
+            this.serverIndex.Name = "serverIndex";
+            this.serverIndex.ReadOnly = true;
+            // 
+            // timeServiceBegins
+            // 
+            this.timeServiceBegins.HeaderText = "Time Service Begins";
+            this.timeServiceBegins.Name = "timeServiceBegins";
+            this.timeServiceBegins.ReadOnly = true;
+            // 
+            // ServiceDurationRandomValue
+            // 
+            this.ServiceDurationRandomValue.HeaderText = "Service Duration Random Value";
+            this.ServiceDurationRandomValue.Name = "ServiceDurationRandomValue";
+            this.ServiceDurationRandomValue.ReadOnly = true;
+            // 
+            // serviceDuration
+            // 
+            this.serviceDuration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.serviceDuration.HeaderText = "Service Duration";
+            this.serviceDuration.Name = "serviceDuration";
+            this.serviceDuration.ReadOnly = true;
+            this.serviceDuration.Width = 102;
+            // 
+            // timeServiceEnds
+            // 
+            this.timeServiceEnds.HeaderText = "Time Service Ends";
+            this.timeServiceEnds.Name = "timeServiceEnds";
+            this.timeServiceEnds.ReadOnly = true;
+            // 
+            // totalDelay
+            // 
+            this.totalDelay.HeaderText = "Total Delay";
+            this.totalDelay.Name = "totalDelay";
+            this.totalDelay.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -132,36 +187,12 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView1.Location = new System.Drawing.Point(7, 20);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(258, 152);
             this.dataGridView1.TabIndex = 0;
@@ -268,37 +299,13 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ServerID,
             this.Average});
             this.dataGridView2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView2.Location = new System.Drawing.Point(7, 20);
             this.dataGridView2.Name = "dataGridView2";
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.Size = new System.Drawing.Size(258, 152);
             this.dataGridView2.TabIndex = 0;
@@ -316,17 +323,6 @@
             this.Average.Name = "Average";
             this.Average.ReadOnly = true;
             // 
-            // CloseForm
-            // 
-            this.CloseForm.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseForm.Location = new System.Drawing.Point(843, 649);
-            this.CloseForm.Name = "CloseForm";
-            this.CloseForm.Size = new System.Drawing.Size(424, 48);
-            this.CloseForm.TabIndex = 12;
-            this.CloseForm.Text = "Close";
-            this.CloseForm.UseVisualStyleBackColor = true;
-            this.CloseForm.Click += new System.EventHandler(this.CloseForm_Click);
-            // 
             // ViewChartsBTN
             // 
             this.ViewChartsBTN.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,75 +334,12 @@
             this.ViewChartsBTN.UseVisualStyleBackColor = true;
             this.ViewChartsBTN.Click += new System.EventHandler(this.ViewChartsBTN_Click);
             // 
-            // totalDelay
-            // 
-            this.totalDelay.HeaderText = "Total Delay";
-            this.totalDelay.Name = "totalDelay";
-            this.totalDelay.ReadOnly = true;
-            // 
-            // timeServiceEnds
-            // 
-            this.timeServiceEnds.HeaderText = "Time Service Ends";
-            this.timeServiceEnds.Name = "timeServiceEnds";
-            this.timeServiceEnds.ReadOnly = true;
-            // 
-            // serviceDuration
-            // 
-            this.serviceDuration.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.serviceDuration.HeaderText = "Service Duration";
-            this.serviceDuration.Name = "serviceDuration";
-            this.serviceDuration.ReadOnly = true;
-            this.serviceDuration.Width = 102;
-            // 
-            // ServiceDurationRandomValue
-            // 
-            this.ServiceDurationRandomValue.HeaderText = "Service Duration Random Value";
-            this.ServiceDurationRandomValue.Name = "ServiceDurationRandomValue";
-            this.ServiceDurationRandomValue.ReadOnly = true;
-            // 
-            // timeServiceBegins
-            // 
-            this.timeServiceBegins.HeaderText = "Time Service Begins";
-            this.timeServiceBegins.Name = "timeServiceBegins";
-            this.timeServiceBegins.ReadOnly = true;
-            // 
-            // serverIndex
-            // 
-            this.serverIndex.HeaderText = "Server Index";
-            this.serverIndex.Name = "serverIndex";
-            this.serverIndex.ReadOnly = true;
-            // 
-            // arrivalTime
-            // 
-            this.arrivalTime.HeaderText = "Arrival Time";
-            this.arrivalTime.Name = "arrivalTime";
-            this.arrivalTime.ReadOnly = true;
-            // 
-            // interArrivalTime
-            // 
-            this.interArrivalTime.HeaderText = "Inter-Arrival Time";
-            this.interArrivalTime.Name = "interArrivalTime";
-            this.interArrivalTime.ReadOnly = true;
-            // 
-            // InterArrivalRandomValue
-            // 
-            this.InterArrivalRandomValue.HeaderText = "Inter-Arrival Random Value";
-            this.InterArrivalRandomValue.Name = "InterArrivalRandomValue";
-            this.InterArrivalRandomValue.ReadOnly = true;
-            // 
-            // customerNo
-            // 
-            this.customerNo.HeaderText = "Customer Number";
-            this.customerNo.Name = "customerNo";
-            this.customerNo.ReadOnly = true;
-            // 
             // SimulationTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1277, 709);
+            this.ClientSize = new System.Drawing.Size(1277, 647);
             this.Controls.Add(this.ViewChartsBTN);
-            this.Controls.Add(this.CloseForm);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.outputDataGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -439,7 +372,6 @@
         public System.Windows.Forms.TextBox textBox4;
         public System.Windows.Forms.Label label4;
         public System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button CloseForm;
         private System.Windows.Forms.Button ViewChartsBTN;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.GroupBox groupBox3;

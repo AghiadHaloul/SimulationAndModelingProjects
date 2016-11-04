@@ -71,7 +71,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(79, 27);
             this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "1000";
+            this.textBox1.Text = "50";
             // 
             // label1
             // 
