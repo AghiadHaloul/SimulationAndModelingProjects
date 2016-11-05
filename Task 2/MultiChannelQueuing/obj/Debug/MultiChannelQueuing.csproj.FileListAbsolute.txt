@@ -101,3 +101,12 @@ C:\Users\Ghido\Google Drive\Seventh Term\06-Simulation and Modeling\Task 2\Task 
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\bin\Debug\Task1Simulation.exe.config
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\bin\Debug\Task1Simulation.exe
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\bin\Debug\Task1Simulation.pdb
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\MultiChannelQueuing.csprojResolveAssemblyReference.cache
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\Task1Simulation.AddType.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\MultiChannelQueuing.Main.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\MultiChannelQueuing.SimulationTable.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\MultiChannelQueuing.Charts.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\Task1Simulation.Properties.Resources.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\MultiChannelQueuing.csproj.GenerateResource.Cache

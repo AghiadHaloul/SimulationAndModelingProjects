@@ -32,7 +32,7 @@ namespace MultiChannelQueuing
         private void ViewChartsBTN_Click(object sender, EventArgs e)
         {
             Charts MainCharts = new Charts();
-            MainCharts.Text = "Chart for "+Convert.ToString(Program.simulationTableForm.comboBox1.Text)+" Paper";
+            MainCharts.Text = "Chart for "+Convert.ToString(Program.simulationTableForm.comboBox1.Text)+" Papers";
             MainCharts.Show();
         }
 
@@ -49,7 +49,9 @@ namespace MultiChannelQueuing
             {
                 Program.theForm.simulation.SetPurchasedPapersCount(Convert.ToInt32(Program.simulationTableForm.comboBox1.Items[i]));
                 Program.theForm.simulation.LaunchSimulation(Convert.ToInt32(Program.theForm.numOfDays.Text));
+                Program.simulationTableForm.outputDataGrid.Rows.Clear();
             }
+            Program.theForm.simulation.LaunchSimulation(Convert.ToInt32(Program.theForm.numOfDays.Text));
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -57,6 +59,11 @@ namespace MultiChannelQueuing
             Program.simulationTableForm.outputDataGrid.Rows.Clear();
             Program.theForm.simulation.SetPurchasedPapersCount(Convert.ToInt32(Program.simulationTableForm.comboBox1.Text));
             Program.theForm.simulation.LaunchSimulation(Convert.ToInt32(Program.theForm.numOfDays.Text));
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
 
         

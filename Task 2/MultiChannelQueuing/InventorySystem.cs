@@ -92,6 +92,13 @@ namespace MultiChannelQueuing
             {
                 Day day = new Day();
                 day.SetId(i);
+                if(day.GetID()==numOfDays)
+                {
+                    int x=0;
+                    x ++;
+                    int y = x;
+                    x++;
+                }
                 day.CalcType();
                 day.CalcDemand();
                 day.CalcRevenueFromSale();
