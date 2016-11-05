@@ -8,17 +8,19 @@ namespace MultiChannelQueuing
     {
         public int simulationScale = 0;
         public InventorySystem simulation;
-        
+
         static Random randomNumber = new Random();
 
         public int RandomProbability()
         {
             return randomNumber.Next(0, 100);
         }
+
         public Main()
         {
             InitializeComponent();
         }
+
         private void Main_Load(object sender, EventArgs e)
         {
             // Load some default values. Editable later.
@@ -46,19 +48,17 @@ namespace MultiChannelQueuing
             simulation.SetSellingPrice(Convert.ToDouble(textBox2.Text));
             simulation.SetScrapValue(Convert.ToDouble(textBox3.Text));
             // Calculate N random values and use them everytime we change the number pf purchased papers.
-            for(int i=0;i<Convert.ToInt32(numOfDays.Text);i++)
+            for (int i = 0; i < Convert.ToInt32(numOfDays.Text); i++)
             {
                 simulation.dayTypeRandomValues.Add(RandomProbability());
                 simulation.demandRandomValues.Add(RandomProbability());
             }
             Program.simulationTableForm.Show();
             button1.Enabled = false;
-
-            //this.Hide();
         }
+
         public static void updateStats(string rev, string cost, string lost, string salvage, string net, string excess, string unsold, string solution)
         {
-
             Program.simulationTableForm.textBox4.Text = rev;
             Program.simulationTableForm.textBox5.Text = cost;
             Program.simulationTableForm.textBox6.Text = lost;
@@ -67,8 +67,8 @@ namespace MultiChannelQueuing
             Program.simulationTableForm.textBox3.Text = excess;
             Program.simulationTableForm.textBox7.Text = unsold;
             Program.simulationTableForm.textBox8.Text = solution;
-
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             dayTypeDGV.Rows.Clear();
@@ -84,6 +84,6 @@ namespace MultiChannelQueuing
         private void button4_Click(object sender, EventArgs e)
         {
             Program.NewTypeForm.Show();
-        }        
+        }
     }
 }
