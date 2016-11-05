@@ -43,13 +43,13 @@ namespace MultiChannelQueuing
                 }
             }
             points.Sort();
-            MessageBox.Show(points.Count.ToString());
+            
             double stepSize = (Math.Abs(points[0].Item1) + Math.Abs(points[points.Count - 1].Item1)) / numOfRanges;
             for (int i = 0; i < numOfRanges; i++)
             {
                 if (i == 0 && i != numOfRanges - 1)
                 {
-                    ranges.Add(new Tuple<double, double, int>(points[0].Item1, points[0].Item1 + stepSize-0.01, 0));
+                    ranges.Add(new Tuple<double, double, int>(points[0].Item1, points[0].Item1 + stepSize-0.010, 0));
                 }
                 else if (i == numOfRanges-1 && i!=0)
                 {
@@ -67,7 +67,13 @@ namespace MultiChannelQueuing
             int k=0;
             for (int i = 0; i < points.Count;)
             {
-                if (points[i].Item1 >= ranges[k].Item1 && points[i].Item1 < ranges[k].Item2)
+                if (numOfRanges == 6)
+                {
+                    int x = 0;
+                    x++;
+
+                }
+                if (Math.Round(points[i].Item1) >= Math.Round(ranges[k].Item1) && Math.Round(points[i].Item1) < Math.Round(ranges[k].Item2))
                 {
                     Tuple<double,double, int> T = new Tuple<double, double, int>(ranges[k].Item1, ranges[k].Item2, ranges[k].Item3 + points[i].Item2);
                     ranges[k] = T;
@@ -77,12 +83,10 @@ namespace MultiChannelQueuing
                 {   
                     if(i==points.Count-1)
                     {
-                        if (points[i].Item1 < ranges[k].Item1 || points[i].Item1 > ranges[k].Item2)
-                            k++;
-                        Tuple<double, double, int> T = new Tuple<double, double, int>(ranges[k].Item1, ranges[k].Item2, ranges[k].Item3 + points[i].Item2);
-                        ranges[k] = T;
+                        Tuple<double, double, int> T = new Tuple<double, double, int>(ranges[ranges.Count - 1].Item1, ranges[ranges.Count - 1].Item2, ranges[ranges.Count - 1].Item3 + points[i].Item2);
+                        ranges[ranges.Count - 1] = T;
                         i++;
-                    }
+                    }  
                     else
                     {
                         k++;
@@ -92,32 +96,11 @@ namespace MultiChannelQueuing
 
             for (int i = 0, j = 0; i < ranges.Count; i++,j++)
             {
-            if(numOfRanges>points.Count)
-            {
-                int x = 0;
-                x++;
-
-            }
+            
                 // Add point value.
                 chart1.Series["ColumnChart"].Points.AddY(ranges[i].Item3);
                 // Add a label to the column.
                 chart1.Series["ColumnChart"].Points[j].AxisLabel =  ranges[i].Item1.ToString("$0.00") + " to " + (ranges[i].Item2).ToString("$0.00");
-                // Add point value.
-               // int t = 0;
-                //int k;
-                //for (k = i; k < i+(Math.Round(Convert.ToDouble(points.Count) / numOfRanges)) && k<points.Count; k++)
-                //{
-            
-                  //  t += points[k].Item2;
-                //}
-                //chart1.Series["ColumnChart"].Points.AddY(t);
-                // Add a label to the column.
-                //chart1.Series["ColumnChart"].Points[j].AxisLabel = points[i].Item1.ToString("$0.00") + " to " + points[k - 1].Item1.ToString("$0.00");
-                //j++;
-                //i = k;
-
-                // Add a label to the column.
-
             }
             
             // Add axis titles.
@@ -139,6 +122,21 @@ namespace MultiChannelQueuing
             loadChart();
         }
 
+        private void numericUpDown1_Click(object sender, EventArgs e)
+        {
+            if(numericUpDown1.Value<1)
+            {
+                numericUpDown1.Value = 1;
+                MessageBox.Show("Please choose a number greater than 0");
+                return;
+            }
+            numericUpDown1.Enabled = false;
+            chart1.Series["ColumnChart"].Points.Clear();
+            loadChart();
+            numericUpDown1.Enabled = true;
+        }
+
+        
         
 
 

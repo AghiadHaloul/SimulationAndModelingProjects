@@ -36,6 +36,11 @@
             this.ProbabilityDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.minPurchased = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.numOfDays = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -46,12 +51,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.DemandDGV = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
             this.demand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.minPurchased = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dayTypeDGV)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -61,7 +61,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(219, 411);
+            this.button1.Location = new System.Drawing.Point(235, 391);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(526, 38);
             this.button1.TabIndex = 5;
@@ -146,6 +146,54 @@
             this.groupBox2.TabIndex = 14;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "System Parameters";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.textBox5.Location = new System.Drawing.Point(373, 82);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(79, 27);
+            this.textBox5.TabIndex = 29;
+            this.textBox5.Text = "100";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label3.Location = new System.Drawing.Point(234, 85);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(119, 19);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Max. Purchased";
+            // 
+            // minPurchased
+            // 
+            this.minPurchased.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.minPurchased.Location = new System.Drawing.Point(149, 82);
+            this.minPurchased.Name = "minPurchased";
+            this.minPurchased.Size = new System.Drawing.Size(79, 27);
+            this.minPurchased.TabIndex = 27;
+            this.minPurchased.Text = "40";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label4.Location = new System.Drawing.Point(6, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(116, 19);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Min. Purchased";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(83, 327);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(133, 30);
+            this.button4.TabIndex = 26;
+            this.button4.Text = "Add Type";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // numOfDays
             // 
@@ -247,65 +295,17 @@
             this.DemandDGV.Size = new System.Drawing.Size(416, 293);
             this.DemandDGV.TabIndex = 10;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(83, 327);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 30);
-            this.button4.TabIndex = 26;
-            this.button4.Text = "Add Type";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // demand
             // 
             this.demand.HeaderText = "Demand";
             this.demand.Name = "demand";
             this.demand.Width = 93;
             // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textBox5.Location = new System.Drawing.Point(373, 82);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(79, 27);
-            this.textBox5.TabIndex = 29;
-            this.textBox5.Text = "100";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label3.Location = new System.Drawing.Point(234, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 19);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Max. Purchased";
-            // 
-            // minPurchased
-            // 
-            this.minPurchased.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.minPurchased.Location = new System.Drawing.Point(149, 82);
-            this.minPurchased.Name = "minPurchased";
-            this.minPurchased.Size = new System.Drawing.Size(79, 27);
-            this.minPurchased.TabIndex = 27;
-            this.minPurchased.Text = "40";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label4.Location = new System.Drawing.Point(6, 85);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 19);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Min. Purchased";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 464);
+            this.ClientSize = new System.Drawing.Size(993, 441);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
