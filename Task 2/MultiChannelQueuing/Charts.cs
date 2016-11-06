@@ -9,7 +9,7 @@ namespace MultiChannelQueuing
 {
     public partial class Charts : Form
     {
-        public Charts(){InitializeComponent();}
+        public Charts() { InitializeComponent(); }
 
         private void Charts_Load(object sender, EventArgs e)
         {
@@ -26,7 +26,8 @@ namespace MultiChannelQueuing
             // <xValue, yValue>
             int numOfRanges = Convert.ToInt32(numericUpDown1.Text);
             for (int i = 0; i < Program.theForm.simulation.daysList.Count; i++)
-            { // Fill the list with points
+            {
+                // Fill the list with points
                 bool found = false;
                 for (int j = 0; j < points.Count; j++)
                 {
@@ -39,77 +40,58 @@ namespace MultiChannelQueuing
                 }
                 if (found == false)
                 {
-                    points.Add(new Tuple<double, int>(Program.theForm.simulation.daysList[i].GetProfitD(), 1));       
+                    points.Add(new Tuple<double, int>(Program.theForm.simulation.daysList[i].GetProfitD(), 1));
                 }
             }
             points.Sort();
-            
+
             double stepSize = (Math.Abs(points[0].Item1) + Math.Abs(points[points.Count - 1].Item1)) / numOfRanges;
             for (int i = 0; i < numOfRanges; i++)
             {
-                if (i == 0 && i != numOfRanges - 1)
+                if (i == 0)
                 {
-                    ranges.Add(new Tuple<double, double, int>(points[0].Item1, points[0].Item1 + stepSize-0.010, 0));
-                }
-                else if (i == numOfRanges-1 && i!=0)
-                {
-                    ranges.Add(new Tuple<double, double, int>(ranges[i - 1].Item2+0.01, ranges[i - 1].Item2 + stepSize+0.01, 0));
-                }
-                else if (i == numOfRanges - 1 && i == 0)
-                {
-                    ranges.Add(new Tuple<double, double, int>(points[0].Item1, points[points.Count - 1].Item1, 0));
+                    ranges.Add(new Tuple<double, double, int>(points[0].Item1, points[0].Item1 + stepSize, 0));
                 }
                 else
                 {
-                    ranges.Add(new Tuple<double, double, int>(ranges[i - 1].Item2+0.01, ranges[i - 1].Item2 + stepSize, 0));
+                    ranges.Add(new Tuple<double, double, int>(ranges[i - 1].Item2, ranges[i - 1].Item2 + stepSize, 0));
                 }
             }
-            int k=0;
-            for (int i = 0; i < points.Count;)
-            {
-                if (numOfRanges == 6)
-                {
-                    int x = 0;
-                    x++;
 
-                }
+            int k = 0;
+            for (int i = 0; i < points.Count; )
+            {
                 if (Math.Round(points[i].Item1) >= Math.Round(ranges[k].Item1) && Math.Round(points[i].Item1) < Math.Round(ranges[k].Item2))
                 {
-                    Tuple<double,double, int> T = new Tuple<double, double, int>(ranges[k].Item1, ranges[k].Item2, ranges[k].Item3 + points[i].Item2);
+                    Tuple<double, double, int> T = new Tuple<double, double, int>(ranges[k].Item1, ranges[k].Item2, ranges[k].Item3 + points[i].Item2);
                     ranges[k] = T;
                     i++;
                 }
+                else if (i == points.Count - 1)
+                {
+                    Tuple<double, double, int> T = new Tuple<double, double, int>(ranges[ranges.Count - 1].Item1, ranges[ranges.Count - 1].Item2, ranges[ranges.Count - 1].Item3 + points[i].Item2);
+                    ranges[ranges.Count - 1] = T;
+                    break;
+                }
                 else
-                {   
-                    if(i==points.Count-1)
-                    {
-                        Tuple<double, double, int> T = new Tuple<double, double, int>(ranges[ranges.Count - 1].Item1, ranges[ranges.Count - 1].Item2, ranges[ranges.Count - 1].Item3 + points[i].Item2);
-                        ranges[ranges.Count - 1] = T;
-                        i++;
-                    }  
-                    else
-                    {
-                        k++;
-                    }   
+                {
+                    k++;
                 }
             }
 
-            for (int i = 0, j = 0; i < ranges.Count; i++,j++)
+            for (int i = 0, j = 0; i < ranges.Count; i++)
             {
-            
                 // Add point value.
                 chart1.Series["ColumnChart"].Points.AddY(ranges[i].Item3);
                 // Add a label to the column.
-                chart1.Series["ColumnChart"].Points[j].AxisLabel =  ranges[i].Item1.ToString("$0.00") + " to " + (ranges[i].Item2).ToString("$0.00");
+                chart1.Series["ColumnChart"].Points[j++].AxisLabel = ranges[i].Item1.ToString("$0.00") + " to " + (ranges[i].Item2).ToString("$0.00");
             }
-            
             // Add axis titles.
             chart1.ChartAreas["ChartArea1"].AxisX.Title = "Revenue ($)";
             chart1.ChartAreas["ChartArea1"].AxisY.Title = "Count of Repetition (Days)";
         }
         private void pie_CheckedChanged(object sender, EventArgs e)
         {
-
             if (chart1.Series["ColumnChart"].ChartType == SeriesChartType.Pie)
                 chart1.Series["ColumnChart"].ChartType = SeriesChartType.Column;
             else
@@ -124,7 +106,7 @@ namespace MultiChannelQueuing
 
         private void numericUpDown1_Click(object sender, EventArgs e)
         {
-            if(numericUpDown1.Value<1)
+            if (numericUpDown1.Value < 1)
             {
                 numericUpDown1.Value = 1;
                 MessageBox.Show("Please choose a number greater than 0");
@@ -135,11 +117,5 @@ namespace MultiChannelQueuing
             loadChart();
             numericUpDown1.Enabled = true;
         }
-
-        
-        
-
-
-
     }
 }
