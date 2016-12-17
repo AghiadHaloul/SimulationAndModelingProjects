@@ -29,37 +29,44 @@
         private void InitializeComponent()
         {
             this.startSimulationButton = new System.Windows.Forms.Button();
-            this.orderUpToLevelTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.numOfTrialsNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.reviewPeriodNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.numOfDaysNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.orderUpToLevelNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.clearLeadButton = new System.Windows.Forms.Button();
             this.leadTimeDataGridView = new System.Windows.Forms.DataGridView();
             this.InterarrivalTimeDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProbabilityDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numOfDaysTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.numOfTrialsTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.reviewPeriodTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.demandDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clearDemandButton = new System.Windows.Forms.Button();
-            this.mValueTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cValueTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.aValueTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.mValueNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.cValueNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.aValueNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfTrialsNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reviewPeriodNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfDaysNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderUpToLevelNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.leadTimeDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.demandDataGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mValueNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cValueNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aValueNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // startSimulationButton
@@ -72,15 +79,6 @@
             this.startSimulationButton.Text = "Start Simulation";
             this.startSimulationButton.UseVisualStyleBackColor = true;
             this.startSimulationButton.Click += new System.EventHandler(this.startSimulationButton_Click);
-            // 
-            // orderUpToLevelTextBox
-            // 
-            this.orderUpToLevelTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.orderUpToLevelTextBox.Location = new System.Drawing.Point(149, 23);
-            this.orderUpToLevelTextBox.Name = "orderUpToLevelTextBox";
-            this.orderUpToLevelTextBox.Size = new System.Drawing.Size(79, 27);
-            this.orderUpToLevelTextBox.TabIndex = 6;
-            this.orderUpToLevelTextBox.Text = "11";
             // 
             // label1
             // 
@@ -104,15 +102,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.numOfTrialsNumericUpDown);
+            this.groupBox2.Controls.Add(this.reviewPeriodNumericUpDown);
+            this.groupBox2.Controls.Add(this.numOfDaysNumericUpDown);
+            this.groupBox2.Controls.Add(this.orderUpToLevelNumericUpDown);
             this.groupBox2.Controls.Add(this.clearLeadButton);
             this.groupBox2.Controls.Add(this.leadTimeDataGridView);
-            this.groupBox2.Controls.Add(this.numOfDaysTextBox);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.numOfTrialsTextBox);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.reviewPeriodTextBox);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.orderUpToLevelTextBox);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(13, 13);
@@ -122,6 +120,74 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "System Parameters";
             // 
+            // numOfTrialsNumericUpDown
+            // 
+            this.numOfTrialsNumericUpDown.Location = new System.Drawing.Point(154, 54);
+            this.numOfTrialsNumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numOfTrialsNumericUpDown.Name = "numOfTrialsNumericUpDown";
+            this.numOfTrialsNumericUpDown.Size = new System.Drawing.Size(83, 27);
+            this.numOfTrialsNumericUpDown.TabIndex = 36;
+            this.numOfTrialsNumericUpDown.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // reviewPeriodNumericUpDown
+            // 
+            this.reviewPeriodNumericUpDown.Location = new System.Drawing.Point(375, 23);
+            this.reviewPeriodNumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.reviewPeriodNumericUpDown.Name = "reviewPeriodNumericUpDown";
+            this.reviewPeriodNumericUpDown.Size = new System.Drawing.Size(86, 27);
+            this.reviewPeriodNumericUpDown.TabIndex = 35;
+            this.reviewPeriodNumericUpDown.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // numOfDaysNumericUpDown
+            // 
+            this.numOfDaysNumericUpDown.Location = new System.Drawing.Point(375, 53);
+            this.numOfDaysNumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numOfDaysNumericUpDown.Name = "numOfDaysNumericUpDown";
+            this.numOfDaysNumericUpDown.Size = new System.Drawing.Size(86, 27);
+            this.numOfDaysNumericUpDown.TabIndex = 34;
+            this.numOfDaysNumericUpDown.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            // 
+            // orderUpToLevelNumericUpDown
+            // 
+            this.orderUpToLevelNumericUpDown.Location = new System.Drawing.Point(154, 21);
+            this.orderUpToLevelNumericUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.orderUpToLevelNumericUpDown.Name = "orderUpToLevelNumericUpDown";
+            this.orderUpToLevelNumericUpDown.Size = new System.Drawing.Size(83, 27);
+            this.orderUpToLevelNumericUpDown.TabIndex = 33;
+            this.orderUpToLevelNumericUpDown.Value = new decimal(new int[] {
+            11,
+            0,
+            0,
+            0});
+            // 
             // clearLeadButton
             // 
             this.clearLeadButton.Location = new System.Drawing.Point(169, 264);
@@ -130,6 +196,7 @@
             this.clearLeadButton.TabIndex = 32;
             this.clearLeadButton.Text = "Clear Values";
             this.clearLeadButton.UseVisualStyleBackColor = true;
+            this.clearLeadButton.Click += new System.EventHandler(this.clearLeadButton_Click);
             // 
             // leadTimeDataGridView
             // 
@@ -153,15 +220,6 @@
             this.ProbabilityDGV.HeaderText = "Probability";
             this.ProbabilityDGV.Name = "ProbabilityDGV";
             // 
-            // numOfDaysTextBox
-            // 
-            this.numOfDaysTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.numOfDaysTextBox.Location = new System.Drawing.Point(382, 53);
-            this.numOfDaysTextBox.Name = "numOfDaysTextBox";
-            this.numOfDaysTextBox.Size = new System.Drawing.Size(79, 27);
-            this.numOfDaysTextBox.TabIndex = 24;
-            this.numOfDaysTextBox.Text = "25";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -172,15 +230,6 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "Number of Days";
             // 
-            // numOfTrialsTextBox
-            // 
-            this.numOfTrialsTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.numOfTrialsTextBox.Location = new System.Drawing.Point(149, 53);
-            this.numOfTrialsTextBox.Name = "numOfTrialsTextBox";
-            this.numOfTrialsTextBox.Size = new System.Drawing.Size(79, 27);
-            this.numOfTrialsTextBox.TabIndex = 22;
-            this.numOfTrialsTextBox.Text = "100";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -190,15 +239,6 @@
             this.label6.Size = new System.Drawing.Size(129, 19);
             this.label6.TabIndex = 23;
             this.label6.Text = "Number of Trials";
-            // 
-            // reviewPeriodTextBox
-            // 
-            this.reviewPeriodTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.reviewPeriodTextBox.Location = new System.Drawing.Point(382, 23);
-            this.reviewPeriodTextBox.Name = "reviewPeriodTextBox";
-            this.reviewPeriodTextBox.Size = new System.Drawing.Size(79, 27);
-            this.reviewPeriodTextBox.TabIndex = 20;
-            this.reviewPeriodTextBox.Text = "5";
             // 
             // label5
             // 
@@ -252,16 +292,7 @@
             this.clearDemandButton.TabIndex = 17;
             this.clearDemandButton.Text = "Clear Values";
             this.clearDemandButton.UseVisualStyleBackColor = true;
-            // 
-            // mValueTextBox
-            // 
-            this.mValueTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.mValueTextBox.Location = new System.Drawing.Point(442, 26);
-            this.mValueTextBox.Name = "mValueTextBox";
-            this.mValueTextBox.ReadOnly = true;
-            this.mValueTextBox.Size = new System.Drawing.Size(46, 27);
-            this.mValueTextBox.TabIndex = 33;
-            this.mValueTextBox.Text = "100";
+            this.clearDemandButton.Click += new System.EventHandler(this.clearDemandButton_Click);
             // 
             // label3
             // 
@@ -269,55 +300,37 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
             this.label3.Location = new System.Drawing.Point(365, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 19);
+            this.label3.Size = new System.Drawing.Size(21, 19);
             this.label3.TabIndex = 34;
-            this.label3.Text = "M Value";
-            // 
-            // cValueTextBox
-            // 
-            this.cValueTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.cValueTextBox.Location = new System.Drawing.Point(256, 26);
-            this.cValueTextBox.Name = "cValueTextBox";
-            this.cValueTextBox.Size = new System.Drawing.Size(41, 27);
-            this.cValueTextBox.TabIndex = 35;
-            this.cValueTextBox.Text = "3";
+            this.label3.Text = "M";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label4.Location = new System.Drawing.Point(187, 29);
+            this.label4.Location = new System.Drawing.Point(230, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 19);
+            this.label4.Size = new System.Drawing.Size(19, 19);
             this.label4.TabIndex = 36;
-            this.label4.Text = "C Value";
-            // 
-            // aValueTextBox
-            // 
-            this.aValueTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.aValueTextBox.Location = new System.Drawing.Point(101, 26);
-            this.aValueTextBox.Name = "aValueTextBox";
-            this.aValueTextBox.Size = new System.Drawing.Size(42, 27);
-            this.aValueTextBox.TabIndex = 37;
-            this.aValueTextBox.Text = "2";
+            this.label4.Text = "C";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label7.Location = new System.Drawing.Point(31, 29);
+            this.label7.Location = new System.Drawing.Point(75, 29);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 19);
+            this.label7.Size = new System.Drawing.Size(20, 19);
             this.label7.TabIndex = 38;
-            this.label7.Text = "A Value";
+            this.label7.Text = "A";
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.aValueTextBox);
+            this.groupBox3.Controls.Add(this.mValueNumericUpDown);
+            this.groupBox3.Controls.Add(this.cValueNumericUpDown);
+            this.groupBox3.Controls.Add(this.aValueNumericUpDown);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.cValueTextBox);
-            this.groupBox3.Controls.Add(this.mValueTextBox);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(237, 329);
@@ -327,12 +340,70 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "LCG Parameters";
             // 
+            // mValueNumericUpDown
+            // 
+            this.mValueNumericUpDown.CausesValidation = false;
+            this.mValueNumericUpDown.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.mValueNumericUpDown.Location = new System.Drawing.Point(392, 26);
+            this.mValueNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.mValueNumericUpDown.Name = "mValueNumericUpDown";
+            this.mValueNumericUpDown.ReadOnly = true;
+            this.mValueNumericUpDown.Size = new System.Drawing.Size(83, 27);
+            this.mValueNumericUpDown.TabIndex = 37;
+            this.mValueNumericUpDown.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // cValueNumericUpDown
+            // 
+            this.cValueNumericUpDown.Location = new System.Drawing.Point(255, 26);
+            this.cValueNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.cValueNumericUpDown.Name = "cValueNumericUpDown";
+            this.cValueNumericUpDown.Size = new System.Drawing.Size(83, 27);
+            this.cValueNumericUpDown.TabIndex = 38;
+            this.cValueNumericUpDown.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // aValueNumericUpDown
+            // 
+            this.aValueNumericUpDown.Location = new System.Drawing.Point(101, 26);
+            this.aValueNumericUpDown.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.aValueNumericUpDown.Name = "aValueNumericUpDown";
+            this.aValueNumericUpDown.Size = new System.Drawing.Size(83, 27);
+            this.aValueNumericUpDown.TabIndex = 39;
+            this.aValueNumericUpDown.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(958, 470);
+            this.ClientSize = new System.Drawing.Size(958, 454);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
@@ -347,11 +418,18 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfTrialsNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.reviewPeriodNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numOfDaysNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orderUpToLevelNumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.leadTimeDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.demandDataGridView)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mValueNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cValueNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aValueNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,15 +438,11 @@
         #endregion
 
         public System.Windows.Forms.Button startSimulationButton;
-        public System.Windows.Forms.TextBox orderUpToLevelTextBox;
         public System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.TextBox numOfTrialsTextBox;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox reviewPeriodTextBox;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox numOfDaysTextBox;
         public System.Windows.Forms.Label label8;
         public System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button clearDemandButton;
@@ -379,13 +453,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Button clearLeadButton;
-        public System.Windows.Forms.TextBox mValueTextBox;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox cValueTextBox;
         public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox aValueTextBox;
         public System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.NumericUpDown numOfTrialsNumericUpDown;
+        public System.Windows.Forms.NumericUpDown reviewPeriodNumericUpDown;
+        public System.Windows.Forms.NumericUpDown numOfDaysNumericUpDown;
+        public System.Windows.Forms.NumericUpDown orderUpToLevelNumericUpDown;
+        public System.Windows.Forms.NumericUpDown mValueNumericUpDown;
+        public System.Windows.Forms.NumericUpDown cValueNumericUpDown;
+        public System.Windows.Forms.NumericUpDown aValueNumericUpDown;
     }
 }
 

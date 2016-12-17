@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace orderUpToLevelProblem
 {
@@ -51,15 +52,14 @@ namespace orderUpToLevelProblem
             }
             trialsComboBox.SelectedIndex = 0;
             int size = Program.simulationTableForm.trialsComboBox.Items.Count;
-            Program.mainForm.simulation.numOfDays = Convert.ToInt32(Program.mainForm.numOfDaysTextBox.Text);
+            Program.mainForm.simulation.numOfDays = Convert.ToInt32(Program.mainForm.numOfDaysNumericUpDown.Text);
 
             int daysCount = Program.mainForm.simulation.numOfDays;
-            int trialsCount = Convert.ToInt32(Program.mainForm.numOfTrialsTextBox.Text);
-            
-            for (int i = size-1; i >=0 ; i--)
+            int trialsCount = Convert.ToInt32(Program.mainForm.numOfDaysNumericUpDown.Text);
+            for (int i = size - 1; i >= 0; i--)
             {
                 Program.simulationTableForm.outputDataGrid.Rows.Clear();
-                Program.mainForm.simulation.LaunchSimulation(i,true);
+                Program.mainForm.simulation.LaunchSimulation(i, true);
             }
             for (int i = 0; i < outputDataGrid.Columns.Count; i++)
             {

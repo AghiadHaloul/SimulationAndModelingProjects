@@ -263,7 +263,7 @@
             this.ViewChartsBTN.Name = "ViewChartsBTN";
             this.ViewChartsBTN.Size = new System.Drawing.Size(424, 48);
             this.ViewChartsBTN.TabIndex = 13;
-            this.ViewChartsBTN.Text = "View Charts";
+            this.ViewChartsBTN.Text = "View Frequency Distribution Histogram";
             this.ViewChartsBTN.UseVisualStyleBackColor = true;
             this.ViewChartsBTN.Click += new System.EventHandler(this.ViewChartsBTN_Click);
             // 
