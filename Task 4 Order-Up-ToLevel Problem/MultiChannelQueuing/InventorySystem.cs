@@ -57,8 +57,8 @@ namespace orderUpToLevelProblem
                 Program.simulationTableForm.outputDataGrid.Rows[i].Cells[5].Style.BackColor = Color.LightGreen;
             if (day.demand == 0)
                 Program.simulationTableForm.outputDataGrid.Rows[i].Cells[5].Style.BackColor = Color.LightPink;
-            
-            if (day.orderQuantity != 0)
+
+            if (day.LeadTime != 0)
             {
                 Program.simulationTableForm.outputDataGrid.Rows[i].Cells[8].Style.BackColor = Color.LightBlue;
                 Program.simulationTableForm.outputDataGrid.Rows[i].Cells[9].Style.BackColor = Color.LightBlue;

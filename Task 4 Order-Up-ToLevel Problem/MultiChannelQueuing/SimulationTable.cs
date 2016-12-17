@@ -20,9 +20,9 @@ namespace orderUpToLevelProblem
             Convert.ToString(day.demand),
             Convert.ToString(day.endingInventory),
             Convert.ToString(day.shortageQuantity),
-            (day.orderQuantity == 0) ? "-" : Convert.ToString(day.orderQuantity),
-            (day.orderQuantity == 0) ? "-" : Convert.ToString(day.randomDigitsForLeadTime),
-            (day.orderQuantity == 0) ? "-" : Convert.ToString(day.LeadTime),
+            (day.LeadTime == 0) ? "-" : Convert.ToString(day.orderQuantity),
+            (day.LeadTime == 0) ? "-" : Convert.ToString(day.randomDigitsForLeadTime),
+            (day.LeadTime == 0) ? "-" : Convert.ToString(day.LeadTime),
             //Convert.ToString(day.daysUntilOrderArrives)
             (day.daysUntilOrderArrives == 0) ? "Next day" : (day.daysUntilOrderArrives == -1) ? "Arrived" : (day.daysUntilOrderArrives < -1) ? "-" : (day.daysUntilOrderArrives == 1) ? Convert.ToString(day.daysUntilOrderArrives) + " day" : Convert.ToString(day.daysUntilOrderArrives) + " days"
             // Convert.ToString(day.shortageSoFar),
