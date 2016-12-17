@@ -21,12 +21,12 @@ namespace orderUpToLevelProblem
             Convert.ToString(day.endingInventory),
             Convert.ToString(day.shortageQuantity),
             (day.orderQuantity == 0) ? "-" : Convert.ToString(day.orderQuantity),
-            (day.orderQuantity == 0) ? "-" : Convert.ToString(day.randomDigitsForDemand),
+            (day.orderQuantity == 0) ? "-" : Convert.ToString(day.randomDigitsForLeadTime),
             (day.orderQuantity == 0) ? "-" : Convert.ToString(day.LeadTime),
             //Convert.ToString(day.daysUntilOrderArrives)
-            (day.daysUntilOrderArrives == -1) ? "Arrived" : (day.daysUntilOrderArrives > -1) ? Convert.ToString(day.daysUntilOrderArrives)+" days" : "-"
-           // Convert.ToString(day.shortageSoFar),
-          //  Convert.ToString(day.alreadyOrdered)
+            (day.daysUntilOrderArrives == 0) ? "Next day" : (day.daysUntilOrderArrives == -1) ? "Arrived" : (day.daysUntilOrderArrives < -1) ? "-" : (day.daysUntilOrderArrives == 1) ? Convert.ToString(day.daysUntilOrderArrives) + " day" : Convert.ToString(day.daysUntilOrderArrives) + " days"
+            // Convert.ToString(day.shortageSoFar),
+            //Convert.ToString(day.alreadyOrdered)
             );
         }
         //(day.orderQuantity == -1) ? "-" : Convert.ToString(day.randomDigitsForDemand),
@@ -39,7 +39,6 @@ namespace orderUpToLevelProblem
         private void ViewChartsBTN_Click(object sender, EventArgs e)
         {
             Charts MainCharts = new Charts();
-            MainCharts.Text = "Chart for " + Convert.ToString(Program.simulationTableForm.trialsComboBox.Text) + " Trials";
             MainCharts.Show();
         }
 
@@ -56,7 +55,7 @@ namespace orderUpToLevelProblem
 
             int daysCount = Program.mainForm.simulation.numOfDays;
             int trialsCount = Convert.ToInt32(Program.mainForm.numOfTrialsTextBox.Text);
-
+            
             for (int i = size-1; i >=0 ; i--)
             {
                 Program.simulationTableForm.outputDataGrid.Rows.Clear();

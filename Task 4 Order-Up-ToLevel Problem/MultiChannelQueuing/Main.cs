@@ -25,6 +25,27 @@ namespace orderUpToLevelProblem
         {
             InitializeComponent();
         }
+        public void generatePseduRandomValues(int i, int daysCount, List<int> trialIDemand, List<int> trialILeadTime)
+        {
+            int a = Convert.ToInt32(Program.mainForm.aValueTextBox.Text);
+            int c = Convert.ToInt32(Program.mainForm.cValueTextBox.Text);
+            int m = Convert.ToInt32(Program.mainForm.mValueTextBox.Text);
+            int zm1 = i;//seed
+            int z;
+            for (int j = 0; j < daysCount; j++)
+            {
+                z = (a * zm1 + c) % m;
+                trialIDemand.Add(z);
+                zm1 = z;
+            }
+
+            for (int j = 0; j < daysCount; j++)
+            {
+                z = (a * zm1 + c) % m;
+                trialILeadTime.Add(z);
+                zm1 = z;
+            }
+        }
         private void Main_Load(object sender, EventArgs e)
         {
             // Load some default values. Editable later.
@@ -53,11 +74,7 @@ namespace orderUpToLevelProblem
             {
                 List<int> trialIDemand = new List<int>();
                 List<int> trialILeadTime = new List<int>();
-                for (int j = 0; j < daysCount; j++)
-                {
-                    trialIDemand.Add(RandomProbability());
-                    trialILeadTime.Add(RandomProbability());
-                }
+                generatePseduRandomValues(i, daysCount, trialIDemand, trialILeadTime);
                 Program.mainForm.simulation.demandPerDayRandomValues.Add(trialIDemand);
                 Program.mainForm.simulation.leadTimeRandomValues.Add(trialILeadTime);
             }

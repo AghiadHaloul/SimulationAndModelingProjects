@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.bar = new System.Windows.Forms.RadioButton();
             this.pie = new System.Windows.Forms.RadioButton();
@@ -42,15 +42,15 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Cursor = System.Windows.Forms.Cursors.Default;
             this.chart1.Location = new System.Drawing.Point(12, 56);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Name = "ColumnChart";
-            series1.YValuesPerPoint = 2;
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Name = "ColumnChart";
+            series3.YValuesPerPoint = 2;
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(950, 456);
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart1";
@@ -109,13 +109,14 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.label2.Location = new System.Drawing.Point(365, 12);
+            this.label2.Location = new System.Drawing.Point(237, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 24);
+            this.label2.Size = new System.Drawing.Size(469, 24);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Frequency of Daily Profit";
+            this.label2.Text = "Frequency Distribution of Average Ending Inventory";
             // 
             // Charts
             // 
@@ -133,7 +134,7 @@
             this.MinimizeBox = false;
             this.Name = "Charts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Charts";
+            this.Text = "Frequency Distribution Chart";
             this.Load += new System.EventHandler(this.Charts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
