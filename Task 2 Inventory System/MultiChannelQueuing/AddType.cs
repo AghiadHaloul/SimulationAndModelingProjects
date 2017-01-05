@@ -25,7 +25,7 @@ namespace Task1Simulation
         private void button4_Click(object sender, EventArgs e)
         {
 
-            InventorySystemTask.Program.theForm.dayTypeDGV.Rows.Add(new string[] { textBox1.Text, textBox2.Text });
+            InventorySystemTask.Program.mForm.dayTypeDataGridView.Rows.Add(new string[] { nameTextBox.Text, probTextBox.Text });
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.probTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nameTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textBox1.Location = new System.Drawing.Point(194, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(123, 27);
-            this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "Huge News";
+            this.nameTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.nameTextBox.Location = new System.Drawing.Point(194, 19);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(123, 27);
+            this.nameTextBox.TabIndex = 8;
+            this.nameTextBox.Text = "Huge News";
             // 
             // label1
             // 
@@ -55,14 +55,14 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "New Type Name:";
             // 
-            // textBox2
+            // probTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textBox2.Location = new System.Drawing.Point(194, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(123, 27);
-            this.textBox2.TabIndex = 10;
-            this.textBox2.Text = "0.33";
+            this.probTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.probTextBox.Location = new System.Drawing.Point(194, 52);
+            this.probTextBox.Name = "probTextBox";
+            this.probTextBox.Size = new System.Drawing.Size(123, 27);
+            this.probTextBox.TabIndex = 10;
+            this.probTextBox.Text = "0.33";
             // 
             // label2
             // 
@@ -74,27 +74,27 @@
             this.label2.TabIndex = 11;
             this.label2.Text = "New Type Probability:";
             // 
-            // button4
+            // AddButton
             // 
-            this.button4.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.button4.Location = new System.Drawing.Point(26, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 30);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Add Type";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.AddButton.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.AddButton.Location = new System.Drawing.Point(26, 90);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(133, 30);
+            this.AddButton.TabIndex = 27;
+            this.AddButton.Text = "Add Type";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button1
+            // closeButton
             // 
-            this.button1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.button1.Location = new System.Drawing.Point(184, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 30);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.closeButton.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.closeButton.Location = new System.Drawing.Point(184, 90);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(133, 30);
+            this.closeButton.TabIndex = 28;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddType
             // 
@@ -102,11 +102,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 132);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.closeButton);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.probTextBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.label1);
             this.Name = "AddType";
             this.Text = "New Type";
@@ -118,11 +118,11 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox nameTextBox;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox probTextBox;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }

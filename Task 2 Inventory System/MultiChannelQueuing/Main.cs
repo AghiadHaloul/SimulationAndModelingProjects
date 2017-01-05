@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace InventorySystemTask
 {
-    public partial class Main : Form
+    public partial class mainForm : Form
     {
         public int simulationScale = 0;
         public InventorySystem simulation;
@@ -16,7 +16,7 @@ namespace InventorySystemTask
             return randomNumber.Next(0, 100);
         }
 
-        public Main()
+        public mainForm()
         {
             InitializeComponent();
         }
@@ -24,17 +24,17 @@ namespace InventorySystemTask
         private void Main_Load(object sender, EventArgs e)
         {
             // Load some default values. Editable later.
-            dayTypeDGV.Rows.Add(new string[] { "Good", "0.35" });
-            dayTypeDGV.Rows.Add(new string[] { "Fair", "0.45" });
-            dayTypeDGV.Rows.Add(new string[] { "Poor", "0.20" });
+            dayTypeDataGridView.Rows.Add(new string[] { "Good", "0.35" });
+            dayTypeDataGridView.Rows.Add(new string[] { "Fair", "0.45" });
+            dayTypeDataGridView.Rows.Add(new string[] { "Poor", "0.20" });
 
-            DemandDGV.Rows.Add(new string[] { "40", "0.03", "0.10", "0.44" });
-            DemandDGV.Rows.Add(new string[] { "50", "0.05", "0.18", "0.22" });
-            DemandDGV.Rows.Add(new string[] { "60", "0.15", "0.40", "0.16" });
-            DemandDGV.Rows.Add(new string[] { "70", "0.20", "0.20", "0.12" });
-            DemandDGV.Rows.Add(new string[] { "80", "0.35", "0.08", "0.06" });
-            DemandDGV.Rows.Add(new string[] { "90", "0.15", "0.04", "0.00" });
-            DemandDGV.Rows.Add(new string[] { "100", "0.07", "0.00", "0.00" });
+            demandDataGridView.Rows.Add(new string[] { "40", "0.03", "0.10", "0.44" });
+            demandDataGridView.Rows.Add(new string[] { "50", "0.05", "0.18", "0.22" });
+            demandDataGridView.Rows.Add(new string[] { "60", "0.15", "0.40", "0.16" });
+            demandDataGridView.Rows.Add(new string[] { "70", "0.20", "0.20", "0.12" });
+            demandDataGridView.Rows.Add(new string[] { "80", "0.35", "0.08", "0.06" });
+            demandDataGridView.Rows.Add(new string[] { "90", "0.15", "0.04", "0.00" });
+            demandDataGridView.Rows.Add(new string[] { "100", "0.07", "0.00", "0.00" });
 
 
             simulation = new InventorySystem();
@@ -43,44 +43,43 @@ namespace InventorySystemTask
 
         public void button1_Click(object sender, EventArgs e)
         {
-            simulation.SetPurchasedPapersCount(Convert.ToInt32(minPurchased.Text));
-            simulation.SetPurchasingPrice(Convert.ToDouble(textBox1.Text));
-            simulation.SetSellingPrice(Convert.ToDouble(textBox2.Text));
-            simulation.SetScrapValue(Convert.ToDouble(textBox3.Text));
-            // Calculate N random values and use them everytime we change the number pf purchased papers.
-            for (int i = 0; i < Convert.ToInt32(numOfDays.Text); i++)
+            simulation.SetPurchasedPapersCount(Convert.ToInt32(minPurchasedTextBox.Text));
+            simulation.SetPurchasingPrice(Convert.ToDouble(purchasePriceTextBox.Text));
+            simulation.SetSellingPrice(Convert.ToDouble(sellingPriceTextBox.Text));
+            simulation.SetScrapValue(Convert.ToDouble(scrapValueTextBox.Text));
+            // Calculate N random values and use them every time we change the number pf purchased papers.
+            for (int i = 0; i < Convert.ToInt32(numOfDaysTextBox.Text); i++)
             {
                 simulation.dayTypeRandomValues.Add(RandomProbability());
                 simulation.demandRandomValues.Add(RandomProbability());
             }
             Program.simulationTableForm.Show();
-            button1.Enabled = false;
+            startSimulationButton.Enabled = false;
         }
 
         public static void updateStats(string rev, string cost, string lost, string salvage, string net, string excess, string unsold, string solution)
         {
-            Program.simulationTableForm.textBox4.Text = rev;
-            Program.simulationTableForm.textBox5.Text = cost;
-            Program.simulationTableForm.textBox6.Text = lost;
-            Program.simulationTableForm.textBox1.Text = salvage;
-            Program.simulationTableForm.textBox2.Text = net;
-            Program.simulationTableForm.textBox3.Text = excess;
-            Program.simulationTableForm.textBox7.Text = unsold;
-            Program.simulationTableForm.textBox8.Text = solution;
+            Program.simulationTableForm.revnueTextBox.Text = rev;
+            Program.simulationTableForm.costOfNewspaperTextBox.Text = cost;
+            Program.simulationTableForm.lostProfitTextBox.Text = lost;
+            Program.simulationTableForm.salvageTextBox.Text = salvage;
+            Program.simulationTableForm.NetProfitTextBox.Text = net;
+            Program.simulationTableForm.excessDemandTextBox.Text = excess;
+            Program.simulationTableForm.unsoldPapersTextBox.Text = unsold;
+            Program.simulationTableForm.optimalNumberTextBox.Text = solution;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dayTypeDGV.Rows.Clear();
+            dayTypeDataGridView.Rows.Clear();
         }
 
         private void dayTypeDGV_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            // Add columns to demand table everytime a new row is added to day type.
-            if (dayTypeDGV.Rows.Count > 1)
-                DemandDGV.Columns.Add(dayTypeDGV.Rows[dayTypeDGV.Rows.Count - 2].Cells[0].Value.ToString(), dayTypeDGV.Rows[dayTypeDGV.Rows.Count - 2].Cells[0].Value.ToString());
+            // Add columns to demand table every time a new row is added to day type.
+            if (dayTypeDataGridView.Rows.Count > 1)
+                demandDataGridView.Columns.Add(dayTypeDataGridView.Rows[dayTypeDataGridView.Rows.Count - 2].Cells[0].Value.ToString(), dayTypeDataGridView.Rows[dayTypeDataGridView.Rows.Count - 2].Cells[0].Value.ToString());
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Program.NewTypeForm.Show();

@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using ZedGraph;
 using System.Windows.Forms.DataVisualization.Charting;
 
 namespace InventorySystemTask
 {
-    public partial class Charts : Form
+    public partial class ChartsForm : Form
     {
-        public Charts() { InitializeComponent(); }
-
+        public ChartsForm() { InitializeComponent(); }
         private void Charts_Load(object sender, EventArgs e)
         {
-
             loadChart();
         }
         void loadChart()
@@ -24,14 +21,14 @@ namespace InventorySystemTask
             // <$0.50,10>
             // <$1.50,20>
             // <xValue, yValue>
-            int numOfRanges = Convert.ToInt32(numericUpDown1.Text);
-            for (int i = 0; i < Program.theForm.simulation.daysList.Count; i++)
+            int numOfRanges = Convert.ToInt32(rangesNumericUpDown.Text);
+            for (int i = 0; i < Program.mForm.simulation.daysList.Count; i++)
             {
                 // Fill the list with points
                 bool found = false;
                 for (int j = 0; j < points.Count; j++)
                 {
-                    if (points[j].Item1 == Program.theForm.simulation.daysList[i].GetProfitD())
+                    if (points[j].Item1 == Program.mForm.simulation.daysList[i].GetProfitD())
                     {
                         Tuple<double, int> T = new Tuple<double, int>(points[j].Item1, points[j].Item2 + 1);
                         points[j] = T;
@@ -40,7 +37,7 @@ namespace InventorySystemTask
                 }
                 if (found == false)
                 {
-                    points.Add(new Tuple<double, int>(Program.theForm.simulation.daysList[i].GetProfitD(), 1));
+                    points.Add(new Tuple<double, int>(Program.mForm.simulation.daysList[i].GetProfitD(), 1));
                 }
             }
             points.Sort();
@@ -106,16 +103,16 @@ namespace InventorySystemTask
 
         private void numericUpDown1_Click(object sender, EventArgs e)
         {
-            if (numericUpDown1.Value < 1)
+            if (rangesNumericUpDown.Value < 1)
             {
-                numericUpDown1.Value = 1;
+                rangesNumericUpDown.Value = 1;
                 MessageBox.Show("Please choose a number greater than 0");
                 return;
             }
-            numericUpDown1.Enabled = false;
+            rangesNumericUpDown.Enabled = false;
             chart1.Series["ColumnChart"].Points.Clear();
             loadChart();
-            numericUpDown1.Enabled = true;
+            rangesNumericUpDown.Enabled = true;
         }
     }
 }

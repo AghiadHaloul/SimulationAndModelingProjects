@@ -19,11 +19,11 @@ namespace InventorySystemTask
 
         public void CalcType()
         {
-            typeRandomDigits = Program.theForm.simulation.dayTypeRandomValues[this.GetID()];// Get the random value for the day from the random values list.
+            typeRandomDigits = Program.mForm.simulation.dayTypeRandomValues[this.GetID()];// Get the random value for the day from the random values list.
             int type = -1;
             for (int i = 0; i < InventorySystem.newsdayType.Count; i++)
             {
-                //Check to which domain does the random probability belog to, and use the corresponding entry as our day type (value is index of type).
+                //Check to which domain does the random probability belong to, and use the corresponding entry as our day type (value is index of type).
                 if (typeRandomDigits >= InventorySystem.newsdayType[i].rangeMin && typeRandomDigits <= InventorySystem.newsdayType[i].rangeMax)
                     type = i;
             }
@@ -31,11 +31,11 @@ namespace InventorySystemTask
         }
         public void CalcDemand()
         {
-            demandRandomDigits = Program.theForm.simulation.demandRandomValues[this.GetID()];
+            demandRandomDigits = Program.mForm.simulation.demandRandomValues[this.GetID()];
             int demand = -1;
             for (int i = 0; i < InventorySystem.demandProbability[type].Count; i++)
             {
-                //Check to which domain does the random probability belog to, and use the corresponding entry as our day demand value.
+                //Check to which domain does the random probability belong to, and use the corresponding entry as our day demand value.
                 if (demandRandomDigits >= InventorySystem.demandProbability[type][i].rangeMin && demandRandomDigits <= InventorySystem.demandProbability[type][i].rangeMax)
                     demand = InventorySystem.demandProbability[type][i].value;
             }
@@ -75,7 +75,6 @@ namespace InventorySystemTask
         {
             this.id = id;
         }
-
         public int GetID() { return this.id; }
         public int GetTypeRandomDigits() { return this.typeRandomDigits; }
         public string GetType() { return InventorySystem.typesNames[type]; }

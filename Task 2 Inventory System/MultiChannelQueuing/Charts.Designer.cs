@@ -1,6 +1,6 @@
 ﻿namespace InventorySystemTask
 {
-    partial class Charts
+    partial class ChartsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,13 +31,13 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.bar = new System.Windows.Forms.RadioButton();
-            this.pie = new System.Windows.Forms.RadioButton();
+            this.barRadioButton = new System.Windows.Forms.RadioButton();
+            this.pieRadioButton = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.rangesNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.titleLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rangesNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // chart1
@@ -55,30 +55,30 @@
             this.chart1.TabIndex = 15;
             this.chart1.Text = "chart1";
             // 
-            // bar
+            // barRadioButton
             // 
-            this.bar.AutoSize = true;
-            this.bar.Checked = true;
-            this.bar.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.bar.Location = new System.Drawing.Point(513, 526);
-            this.bar.Name = "bar";
-            this.bar.Size = new System.Drawing.Size(93, 23);
-            this.bar.TabIndex = 16;
-            this.bar.TabStop = true;
-            this.bar.Text = "Bar Chart";
-            this.bar.UseVisualStyleBackColor = true;
+            this.barRadioButton.AutoSize = true;
+            this.barRadioButton.Checked = true;
+            this.barRadioButton.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.barRadioButton.Location = new System.Drawing.Point(513, 526);
+            this.barRadioButton.Name = "barRadioButton";
+            this.barRadioButton.Size = new System.Drawing.Size(93, 23);
+            this.barRadioButton.TabIndex = 16;
+            this.barRadioButton.TabStop = true;
+            this.barRadioButton.Text = "Bar Chart";
+            this.barRadioButton.UseVisualStyleBackColor = true;
             // 
-            // pie
+            // pieRadioButton
             // 
-            this.pie.AutoSize = true;
-            this.pie.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.pie.Location = new System.Drawing.Point(513, 555);
-            this.pie.Name = "pie";
-            this.pie.Size = new System.Drawing.Size(91, 23);
-            this.pie.TabIndex = 17;
-            this.pie.Text = "Pie Chart";
-            this.pie.UseVisualStyleBackColor = true;
-            this.pie.CheckedChanged += new System.EventHandler(this.pie_CheckedChanged);
+            this.pieRadioButton.AutoSize = true;
+            this.pieRadioButton.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.pieRadioButton.Location = new System.Drawing.Point(513, 555);
+            this.pieRadioButton.Name = "pieRadioButton";
+            this.pieRadioButton.Size = new System.Drawing.Size(91, 23);
+            this.pieRadioButton.TabIndex = 17;
+            this.pieRadioButton.Text = "Pie Chart";
+            this.pieRadioButton.UseVisualStyleBackColor = true;
+            this.pieRadioButton.CheckedChanged += new System.EventHandler(this.pie_CheckedChanged);
             // 
             // label1
             // 
@@ -90,51 +90,51 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Number of Ranges";
             // 
-            // numericUpDown1
+            // rangesNumericUpDown
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.numericUpDown1.Location = new System.Drawing.Point(355, 540);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 27);
-            this.numericUpDown1.TabIndex = 20;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.rangesNumericUpDown.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.rangesNumericUpDown.Location = new System.Drawing.Point(355, 540);
+            this.rangesNumericUpDown.Name = "rangesNumericUpDown";
+            this.rangesNumericUpDown.ReadOnly = true;
+            this.rangesNumericUpDown.Size = new System.Drawing.Size(120, 27);
+            this.rangesNumericUpDown.TabIndex = 20;
+            this.rangesNumericUpDown.Value = new decimal(new int[] {
             2,
             0,
             0,
             0});
-            this.numericUpDown1.Click += new System.EventHandler(this.numericUpDown1_Click);
+            this.rangesNumericUpDown.Click += new System.EventHandler(this.numericUpDown1_Click);
             // 
-            // label2
+            // titleLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.label2.Location = new System.Drawing.Point(365, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(228, 24);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Frequency of Daily Profit";
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.titleLabel.Location = new System.Drawing.Point(365, 12);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(228, 24);
+            this.titleLabel.TabIndex = 21;
+            this.titleLabel.Text = "Frequency of Daily Profit";
             // 
-            // Charts
+            // ChartsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 594);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.titleLabel);
+            this.Controls.Add(this.rangesNumericUpDown);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pie);
-            this.Controls.Add(this.bar);
+            this.Controls.Add(this.pieRadioButton);
+            this.Controls.Add(this.barRadioButton);
             this.Controls.Add(this.chart1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Charts";
+            this.Name = "ChartsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Charts";
             this.Load += new System.EventHandler(this.Charts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rangesNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,10 +143,10 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
-        private System.Windows.Forms.RadioButton bar;
-        private System.Windows.Forms.RadioButton pie;
+        private System.Windows.Forms.RadioButton barRadioButton;
+        private System.Windows.Forms.RadioButton pieRadioButton;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown rangesNumericUpDown;
+        private System.Windows.Forms.Label titleLabel;
     }
 }

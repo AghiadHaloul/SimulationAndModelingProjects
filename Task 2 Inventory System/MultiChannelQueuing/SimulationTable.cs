@@ -32,27 +32,27 @@ namespace InventorySystemTask
 
         private void ViewChartsBTN_Click(object sender, EventArgs e)
         {
-            Charts MainCharts = new Charts();
-            MainCharts.Text = "Chart for " + Convert.ToString(Program.simulationTableForm.comboBox1.Text) + " Papers";
+            ChartsForm MainCharts = new ChartsForm();
+            MainCharts.Text = "Chart for " + Convert.ToString(Program.simulationTableForm.purchasedPapersComboBox.Text) + " Papers";
             MainCharts.Show();
         }
 
         private void SimulationTable_Load(object sender, EventArgs e)
         {
-            int minPurchased = Convert.ToInt32(Program.theForm.minPurchased.Text),
-                maxPurchased = Convert.ToInt32(Program.theForm.maxPurchased.Text);
+            int minPurchased = Convert.ToInt32(Program.mForm.minPurchasedTextBox.Text),
+                maxPurchased = Convert.ToInt32(Program.mForm.maxPurchasedTextBox.Text);
             for (int i = minPurchased; i <= maxPurchased; i += 10)
             {
                 // Add numbers of papers to the combo box (40,50,60...)
-                Program.simulationTableForm.comboBox1.Items.Add(i);
+                Program.simulationTableForm.purchasedPapersComboBox.Items.Add(i);
             }
-            comboBox1.SelectedIndex = 0;
-            int size = Program.simulationTableForm.comboBox1.Items.Count;
+            purchasedPapersComboBox.SelectedIndex = 0;
+            int size = Program.simulationTableForm.purchasedPapersComboBox.Items.Count;
             // Launch the simulation for all the values in the combobox to find the optimal answer.
             for (int i = size - 1; i >= 0; i--)
             {
-                Program.theForm.simulation.SetPurchasedPapersCount(Convert.ToInt32(Program.simulationTableForm.comboBox1.Items[i]));
-                Program.theForm.simulation.LaunchSimulation(Convert.ToInt32(Program.theForm.numOfDays.Text));
+                Program.mForm.simulation.SetPurchasedPapersCount(Convert.ToInt32(Program.simulationTableForm.purchasedPapersComboBox.Items[i]));
+                Program.mForm.simulation.LaunchSimulation(Convert.ToInt32(Program.mForm.numOfDaysTextBox.Text));
                 if (i != 0) Program.simulationTableForm.outputDataGrid.Rows.Clear();
             }
         }
@@ -60,8 +60,8 @@ namespace InventorySystemTask
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Program.simulationTableForm.outputDataGrid.Rows.Clear();
-            Program.theForm.simulation.SetPurchasedPapersCount(Convert.ToInt32(Program.simulationTableForm.comboBox1.Text));
-            Program.theForm.simulation.LaunchSimulation(Convert.ToInt32(Program.theForm.numOfDays.Text));
+            Program.mForm.simulation.SetPurchasedPapersCount(Convert.ToInt32(Program.simulationTableForm.purchasedPapersComboBox.Text));
+            Program.mForm.simulation.LaunchSimulation(Convert.ToInt32(Program.mForm.numOfDaysTextBox.Text));
         }
     }
 }

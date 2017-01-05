@@ -23,8 +23,7 @@ namespace InventorySystemTask
         public static int optimalNumOfPurchase = -1;
         public List<int> dayTypeRandomValues = new List<int>();
         public List<int> demandRandomValues = new List<int>();
-
-        public static List<Probability> newsdayType = new List<Probability>();  //Day Type List
+        public static List<Probability> newsdayType = new List<Probability>();  //Day Types List.
         public static List<List<Probability>> demandProbability = new List<List<Probability>>();    //Demand probability for each day type.
         public List<Day> daysList = new List<Day>();    //The values that will be displayed in the simulation table.
         public static List<String> typesNames = new List<string>(); //for converting type index to string.
@@ -32,7 +31,7 @@ namespace InventorySystemTask
         public void SetNewsdayType()
         {
             //Loading from data grid views.
-            DataGridView d = Program.theForm.dayTypeDGV;
+            DataGridView d = Program.mForm.dayTypeDataGridView;
             string typeString;
             for (int i = 0; i < d.Rows.Count - 1; i++)
             {
@@ -56,7 +55,7 @@ namespace InventorySystemTask
         public void setDemandProbability()
         {
             //Loading from data grid views.
-            DataGridView d = Program.theForm.DemandDGV;
+            DataGridView d = Program.mForm.demandDataGridView;
             for (int i = 1; i < d.Columns.Count; i++)
             {
                 List<Probability> L = new List<Probability>();
@@ -107,7 +106,7 @@ namespace InventorySystemTask
                 optimalNumOfPurchase = purchasedPapersCount;
                 maximumProfitPossible = netProfit;
             }
-            Main.updateStats(totalRevenueFromSales.ToString("$0.00"),
+            mainForm.updateStats(totalRevenueFromSales.ToString("$0.00"),
                 totalCostOfNewsPapers.ToString("$0.00"),
                 totalLostProfit.ToString("$0.00"),
                 totalSalvage.ToString("$0.00"),

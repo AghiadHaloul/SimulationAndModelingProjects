@@ -38,30 +38,30 @@
             this.ServiceDurationRandomValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serviceDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeServiceEnds = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.statsGroupBox = new System.Windows.Forms.GroupBox();
+            this.optimalNumberTextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.purchasedPapersComboBox = new System.Windows.Forms.ComboBox();
+            this.unsoldPapersTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.excessDemandTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.NetProfitTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.salvageTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lostProfitTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.costOfNewspaperTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.revnueTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.ViewChartsBTN = new System.Windows.Forms.Button();
+            this.ViewChartsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.outputDataGrid)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.statsGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // outputDataGrid
@@ -145,44 +145,44 @@
             this.timeServiceEnds.Name = "timeServiceEnds";
             this.timeServiceEnds.ReadOnly = true;
             // 
-            // groupBox1
+            // statsGroupBox
             // 
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(843, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(424, 587);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
+            this.statsGroupBox.Controls.Add(this.optimalNumberTextBox);
+            this.statsGroupBox.Controls.Add(this.label10);
+            this.statsGroupBox.Controls.Add(this.label9);
+            this.statsGroupBox.Controls.Add(this.purchasedPapersComboBox);
+            this.statsGroupBox.Controls.Add(this.unsoldPapersTextBox);
+            this.statsGroupBox.Controls.Add(this.label8);
+            this.statsGroupBox.Controls.Add(this.excessDemandTextBox);
+            this.statsGroupBox.Controls.Add(this.label7);
+            this.statsGroupBox.Controls.Add(this.NetProfitTextBox);
+            this.statsGroupBox.Controls.Add(this.label3);
+            this.statsGroupBox.Controls.Add(this.salvageTextBox);
+            this.statsGroupBox.Controls.Add(this.label2);
+            this.statsGroupBox.Controls.Add(this.label1);
+            this.statsGroupBox.Controls.Add(this.button2);
+            this.statsGroupBox.Controls.Add(this.lostProfitTextBox);
+            this.statsGroupBox.Controls.Add(this.label6);
+            this.statsGroupBox.Controls.Add(this.costOfNewspaperTextBox);
+            this.statsGroupBox.Controls.Add(this.label5);
+            this.statsGroupBox.Controls.Add(this.revnueTextBox);
+            this.statsGroupBox.Controls.Add(this.label4);
+            this.statsGroupBox.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.statsGroupBox.Location = new System.Drawing.Point(843, 2);
+            this.statsGroupBox.Name = "statsGroupBox";
+            this.statsGroupBox.Size = new System.Drawing.Size(424, 587);
+            this.statsGroupBox.TabIndex = 9;
+            this.statsGroupBox.TabStop = false;
             // 
-            // textBox8
+            // optimalNumberTextBox
             // 
-            this.textBox8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox8.Location = new System.Drawing.Point(287, 364);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(119, 27);
-            this.textBox8.TabIndex = 31;
+            this.optimalNumberTextBox.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optimalNumberTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.optimalNumberTextBox.Location = new System.Drawing.Point(287, 364);
+            this.optimalNumberTextBox.Name = "optimalNumberTextBox";
+            this.optimalNumberTextBox.ReadOnly = true;
+            this.optimalNumberTextBox.Size = new System.Drawing.Size(119, 27);
+            this.optimalNumberTextBox.TabIndex = 31;
             // 
             // label10
             // 
@@ -204,22 +204,22 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Purchased Newspapers:";
             // 
-            // comboBox1
+            // purchasedPapersComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(285, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
-            this.comboBox1.TabIndex = 28;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.purchasedPapersComboBox.FormattingEnabled = true;
+            this.purchasedPapersComboBox.Location = new System.Drawing.Point(285, 31);
+            this.purchasedPapersComboBox.Name = "purchasedPapersComboBox";
+            this.purchasedPapersComboBox.Size = new System.Drawing.Size(121, 27);
+            this.purchasedPapersComboBox.TabIndex = 28;
+            this.purchasedPapersComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox7
+            // unsoldPapersTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(307, 327);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(100, 27);
-            this.textBox7.TabIndex = 27;
+            this.unsoldPapersTextBox.Location = new System.Drawing.Point(307, 327);
+            this.unsoldPapersTextBox.Name = "unsoldPapersTextBox";
+            this.unsoldPapersTextBox.ReadOnly = true;
+            this.unsoldPapersTextBox.Size = new System.Drawing.Size(100, 27);
+            this.unsoldPapersTextBox.TabIndex = 27;
             // 
             // label8
             // 
@@ -231,13 +231,13 @@
             this.label8.TabIndex = 26;
             this.label8.Text = "Number of days having unsold papers:";
             // 
-            // textBox3
+            // excessDemandTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(307, 294);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(100, 27);
-            this.textBox3.TabIndex = 25;
+            this.excessDemandTextBox.Location = new System.Drawing.Point(307, 294);
+            this.excessDemandTextBox.Name = "excessDemandTextBox";
+            this.excessDemandTextBox.ReadOnly = true;
+            this.excessDemandTextBox.Size = new System.Drawing.Size(100, 27);
+            this.excessDemandTextBox.TabIndex = 25;
             // 
             // label7
             // 
@@ -249,13 +249,13 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "Number of days having excess demand:";
             // 
-            // textBox2
+            // NetProfitTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(308, 263);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 23;
+            this.NetProfitTextBox.Location = new System.Drawing.Point(308, 263);
+            this.NetProfitTextBox.Name = "NetProfitTextBox";
+            this.NetProfitTextBox.ReadOnly = true;
+            this.NetProfitTextBox.Size = new System.Drawing.Size(100, 27);
+            this.NetProfitTextBox.TabIndex = 23;
             // 
             // label3
             // 
@@ -267,13 +267,13 @@
             this.label3.TabIndex = 22;
             this.label3.Text = "Net Profit:";
             // 
-            // textBox1
+            // salvageTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(308, 230);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 27);
-            this.textBox1.TabIndex = 21;
+            this.salvageTextBox.Location = new System.Drawing.Point(308, 230);
+            this.salvageTextBox.Name = "salvageTextBox";
+            this.salvageTextBox.ReadOnly = true;
+            this.salvageTextBox.Size = new System.Drawing.Size(100, 27);
+            this.salvageTextBox.TabIndex = 21;
             // 
             // label2
             // 
@@ -304,13 +304,13 @@
             this.button2.Text = "Next";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // lostProfitTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(307, 199);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 27);
-            this.textBox6.TabIndex = 17;
+            this.lostProfitTextBox.Location = new System.Drawing.Point(307, 199);
+            this.lostProfitTextBox.Name = "lostProfitTextBox";
+            this.lostProfitTextBox.ReadOnly = true;
+            this.lostProfitTextBox.Size = new System.Drawing.Size(100, 27);
+            this.lostProfitTextBox.TabIndex = 17;
             // 
             // label6
             // 
@@ -322,13 +322,13 @@
             this.label6.TabIndex = 16;
             this.label6.Text = "Total Lost Profit from Excess Demand:";
             // 
-            // textBox5
+            // costOfNewspaperTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(307, 164);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 15;
+            this.costOfNewspaperTextBox.Location = new System.Drawing.Point(307, 164);
+            this.costOfNewspaperTextBox.Name = "costOfNewspaperTextBox";
+            this.costOfNewspaperTextBox.ReadOnly = true;
+            this.costOfNewspaperTextBox.Size = new System.Drawing.Size(100, 27);
+            this.costOfNewspaperTextBox.TabIndex = 15;
             // 
             // label5
             // 
@@ -340,13 +340,13 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Total Cost of Newspapers:";
             // 
-            // textBox4
+            // revnueTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(307, 131);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 27);
-            this.textBox4.TabIndex = 13;
+            this.revnueTextBox.Location = new System.Drawing.Point(307, 131);
+            this.revnueTextBox.Name = "revnueTextBox";
+            this.revnueTextBox.ReadOnly = true;
+            this.revnueTextBox.Size = new System.Drawing.Size(100, 27);
+            this.revnueTextBox.TabIndex = 13;
             // 
             // label4
             // 
@@ -358,24 +358,24 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Total Revenue from Sales:";
             // 
-            // ViewChartsBTN
+            // ViewChartsButton
             // 
-            this.ViewChartsBTN.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewChartsBTN.Location = new System.Drawing.Point(843, 595);
-            this.ViewChartsBTN.Name = "ViewChartsBTN";
-            this.ViewChartsBTN.Size = new System.Drawing.Size(424, 48);
-            this.ViewChartsBTN.TabIndex = 13;
-            this.ViewChartsBTN.Text = "View Charts";
-            this.ViewChartsBTN.UseVisualStyleBackColor = true;
-            this.ViewChartsBTN.Click += new System.EventHandler(this.ViewChartsBTN_Click);
+            this.ViewChartsButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewChartsButton.Location = new System.Drawing.Point(843, 595);
+            this.ViewChartsButton.Name = "ViewChartsButton";
+            this.ViewChartsButton.Size = new System.Drawing.Size(424, 48);
+            this.ViewChartsButton.TabIndex = 13;
+            this.ViewChartsButton.Text = "View Charts";
+            this.ViewChartsButton.UseVisualStyleBackColor = true;
+            this.ViewChartsButton.Click += new System.EventHandler(this.ViewChartsBTN_Click);
             // 
             // SimulationTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 647);
-            this.Controls.Add(this.ViewChartsBTN);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ViewChartsButton);
+            this.Controls.Add(this.statsGroupBox);
             this.Controls.Add(this.outputDataGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -385,8 +385,8 @@
             this.Text = "Simulation Table";
             this.Load += new System.EventHandler(this.SimulationTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.outputDataGrid)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.statsGroupBox.ResumeLayout(false);
+            this.statsGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -394,15 +394,15 @@
         #endregion
 
         public System.Windows.Forms.DataGridView outputDataGrid;
-        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.GroupBox statsGroupBox;
         public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.TextBox textBox6;
+        public System.Windows.Forms.TextBox lostProfitTextBox;
         public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox textBox5;
+        public System.Windows.Forms.TextBox costOfNewspaperTextBox;
         public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox textBox4;
+        public System.Windows.Forms.TextBox revnueTextBox;
         public System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button ViewChartsBTN;
+        private System.Windows.Forms.Button ViewChartsButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn customerNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn InterArrivalRandomValue;
@@ -413,17 +413,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ServiceDurationRandomValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn serviceDuration;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeServiceEnds;
-        public System.Windows.Forms.TextBox textBox7;
+        public System.Windows.Forms.TextBox unsoldPapersTextBox;
         public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox excessDemandTextBox;
         public System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox NetProfitTextBox;
         public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox salvageTextBox;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label9;
-        public System.Windows.Forms.ComboBox comboBox1;
-        public System.Windows.Forms.TextBox textBox8;
+        public System.Windows.Forms.ComboBox purchasedPapersComboBox;
+        public System.Windows.Forms.TextBox optimalNumberTextBox;
         public System.Windows.Forms.Label label10;
         
     }

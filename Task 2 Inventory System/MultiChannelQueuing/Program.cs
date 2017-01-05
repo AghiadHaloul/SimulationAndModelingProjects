@@ -8,11 +8,11 @@ namespace InventorySystemTask
 {
     static class Program
     {
-        public static Main theForm = new Main();
+        public static mainForm mForm = new mainForm();
         public static SimulationTable simulationTableForm = new SimulationTable();
-        public static Charts MainCharts = new Charts();
+        public static ChartsForm MainCharts = new ChartsForm();
         public static Task1Simulation.AddType NewTypeForm = new Task1Simulation.AddType();
-        // static Form1 theForm = new Form1();
+        // static Form1 mForm = new Form1();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -22,7 +22,7 @@ namespace InventorySystemTask
         {    
             Application.EnableVisualStyles();
             //Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(theForm);
+            Application.Run(mForm);
         }
     }
 }
