@@ -82,7 +82,7 @@
             this.ServerBusyChartPanel.ScrollMinY2 = 0D;
             this.ServerBusyChartPanel.Size = new System.Drawing.Size(978, 446);
             this.ServerBusyChartPanel.TabIndex = 13;
-            this.ServerBusyChartPanel.UseExtendedPrintDialog = true;
+            //this.ServerBusyChartPanel.UseExtendedPrintDialog = true;
             this.ServerBusyChartPanel.ZoomStepFraction = 0D;
             // 
             // label1
@@ -128,7 +128,7 @@
             this.QueueSizeHistogramPanel.ScrollMinY2 = 0D;
             this.QueueSizeHistogramPanel.Size = new System.Drawing.Size(1005, 505);
             this.QueueSizeHistogramPanel.TabIndex = 0;
-            this.QueueSizeHistogramPanel.UseExtendedPrintDialog = true;
+            //this.QueueSizeHistogramPanel.UseExtendedPrintDialog = true;
             this.QueueSizeHistogramPanel.ZoomStepFraction = 0D;
             // 
             // CustomersQueueGraph
@@ -155,7 +155,7 @@
             this.CustomerQueueGraphPanel.ScrollMinY2 = 0D;
             this.CustomerQueueGraphPanel.Size = new System.Drawing.Size(1005, 505);
             this.CustomerQueueGraphPanel.TabIndex = 0;
-            this.CustomerQueueGraphPanel.UseExtendedPrintDialog = true;
+            //this.CustomerQueueGraphPanel.UseExtendedPrintDialog = true;
             this.CustomerQueueGraphPanel.ZoomStepFraction = 0D;
             // 
             // Charts

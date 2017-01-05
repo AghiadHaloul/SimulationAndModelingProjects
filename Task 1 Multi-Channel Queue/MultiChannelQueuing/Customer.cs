@@ -6,21 +6,21 @@ namespace MultiChannelQueuing
     public class Customer
     {
         int id;
-        int interArrivalTime; // Randomly generated number indicated the time difference between the entry time of the customer and the entry time of the one before him.
-        int arrivalTime;      // previousCustomer.arrivalTime + interArrivalTime
-        int serverIndex;    // 0 for able and 1 for baker
-        int serviceBegin;// the time at which the server started serving the customer.
+        int interArrivalTime; // Randomly generated number that indicates the time difference between the entry time of a customer and the entry time of the customer before him.
+        int arrivalTime;      // previousCustomer.arrivalTime + interArrivalTime.
+        int serverIndex;    // 0 for 'able' and 1 for 'baker'.
+        int serviceBegin;// The time at which the server started serving the customer.
         int serviceDuration;
         int serviceEnd;
-        int delay; // the amount of time the customer spent waiting until he was served by the server.
+        int delay; // The amount of time the customer spent waiting until he was served by the server.
         int interArrivalProbability;
         int serviceDurationProbability;
-        static Random time = new Random();
+
         public Customer() { }
 
         public int RandomProbability()
         {
-           return time.Next(0, 100);
+            return RandomValue.getRandom(0, 100);
         }
         public void CalcInterArrival()
         {
@@ -28,7 +28,7 @@ namespace MultiChannelQueuing
             int time = -1;
             for (int i = 0; i < QueuingSystem.interArrivalTime.Count; i++)
             {
-                // check to which domain does the random probability belogs to, and use the corresponding entry as our inter-arrival time.
+                // Check to which domain does the random probability belong to, and use the corresponding entry as our inter-arrival time.
                 if (interArrivalProbability >= QueuingSystem.interArrivalTime[i].rangeMin && interArrivalProbability <= QueuingSystem.interArrivalTime[i].rangeMax)
                     time = QueuingSystem.interArrivalTime[i].duration;
             }
@@ -40,7 +40,7 @@ namespace MultiChannelQueuing
             int time = -1;
             for (int i = 0; i < QueuingSystem.servers[server].serviceTime.Count; i++)
             {
-                // check to which domain does the random probability belogs to, and use the corresponding entry as our service duration time.
+                // check to which domain does the random probability belongs to, and use the corresponding entry as our service duration time.
                 if (serviceDurationProbability >= QueuingSystem.servers[server].serviceTime[i].rangeMin && serviceDurationProbability <= QueuingSystem.servers[server].serviceTime[i].rangeMax)
                     time = QueuingSystem.servers[server].serviceTime[i].duration;
             }

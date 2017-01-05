@@ -8,7 +8,7 @@ namespace MultiChannelQueuing
 {
     public partial class Charts : Form
     {
-        public Charts(){InitializeComponent();}
+        public Charts() { InitializeComponent(); }
 
         private void LoadCustomerQueueGraph()
         {
@@ -35,9 +35,9 @@ namespace MultiChannelQueuing
             CustomerQueueGraphPane.YAxis.Scale.Min = 0;
 
             CustomerQueueGraphPane.XAxis.Scale.Max = MaxGraphValueQueueGraph;
-            
+
             // Getting the maximum value for the queue size ..  
-            CustomerQueueGraphPane.YAxis.Scale.Max = Convert.ToInt32(Program.simulationTableForm.textBox5.Text);
+            CustomerQueueGraphPane.YAxis.Scale.Max = Convert.ToInt32(Program.simulationTableForm.maxQueueLengthTextBox.Text);
 
             CustomerQueueGraphPane.YAxis.Scale.MajorStep = 1;
 
@@ -151,7 +151,7 @@ namespace MultiChannelQueuing
 
             myPane.XAxis.Scale.Max = MaxGraphValue;
             myPane.YAxis.Scale.Max = MaxGraphValue; // We don't care for the Y axis, but we need to do that to expand the chart
-            
+
             myPane.Chart.Fill = new Fill(Color.White, Color.FromArgb(255, 255, 166), 90F);
             myPane.Fill = new Fill(Color.FromArgb(250, 250, 255));
 

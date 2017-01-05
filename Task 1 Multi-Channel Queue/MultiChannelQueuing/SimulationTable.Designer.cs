@@ -39,30 +39,30 @@
             this.serviceDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeServiceEnds = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totalDelay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.InfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.utilizationGroupBox = new System.Windows.Forms.GroupBox();
+            this.utilizationDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
+            this.resultsLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.probOfQueueTextBox = new System.Windows.Forms.TextBox();
+            this.probOfWaitLabel = new System.Windows.Forms.Label();
+            this.maxQueueLengthTextBox = new System.Windows.Forms.TextBox();
+            this.maxQueueLabel = new System.Windows.Forms.Label();
+            this.avgQueueWaitTextBox = new System.Windows.Forms.TextBox();
+            this.avgQueueLabel = new System.Windows.Forms.Label();
+            this.avgServiceGroupBox = new System.Windows.Forms.GroupBox();
+            this.avgServiceDataGridView = new System.Windows.Forms.DataGridView();
             this.ServerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Average = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ViewChartsBTN = new System.Windows.Forms.Button();
+            this.ViewChartsButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.outputDataGrid)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.InfoGroupBox.SuspendLayout();
+            this.utilizationGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.utilizationDataGridView)).BeginInit();
+            this.avgServiceGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.avgServiceDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // outputDataGrid
@@ -152,50 +152,50 @@
             this.totalDelay.Name = "totalDelay";
             this.totalDelay.ReadOnly = true;
             // 
-            // groupBox1
+            // InfoGroupBox
             // 
-            this.groupBox1.Controls.Add(this.groupBox3);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.groupBox1.Location = new System.Drawing.Point(843, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(424, 587);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
+            this.InfoGroupBox.Controls.Add(this.utilizationGroupBox);
+            this.InfoGroupBox.Controls.Add(this.resultsLabel);
+            this.InfoGroupBox.Controls.Add(this.button2);
+            this.InfoGroupBox.Controls.Add(this.probOfQueueTextBox);
+            this.InfoGroupBox.Controls.Add(this.probOfWaitLabel);
+            this.InfoGroupBox.Controls.Add(this.maxQueueLengthTextBox);
+            this.InfoGroupBox.Controls.Add(this.maxQueueLabel);
+            this.InfoGroupBox.Controls.Add(this.avgQueueWaitTextBox);
+            this.InfoGroupBox.Controls.Add(this.avgQueueLabel);
+            this.InfoGroupBox.Controls.Add(this.avgServiceGroupBox);
+            this.InfoGroupBox.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.InfoGroupBox.Location = new System.Drawing.Point(843, 2);
+            this.InfoGroupBox.Name = "InfoGroupBox";
+            this.InfoGroupBox.Size = new System.Drawing.Size(424, 587);
+            this.InfoGroupBox.TabIndex = 9;
+            this.InfoGroupBox.TabStop = false;
             // 
-            // groupBox3
+            // utilizationGroupBox
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
-            this.groupBox3.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.groupBox3.Location = new System.Drawing.Point(75, 279);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(278, 188);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Utilization Time";
+            this.utilizationGroupBox.Controls.Add(this.utilizationDataGridView);
+            this.utilizationGroupBox.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.utilizationGroupBox.Location = new System.Drawing.Point(75, 279);
+            this.utilizationGroupBox.Name = "utilizationGroupBox";
+            this.utilizationGroupBox.Size = new System.Drawing.Size(278, 188);
+            this.utilizationGroupBox.TabIndex = 1;
+            this.utilizationGroupBox.TabStop = false;
+            this.utilizationGroupBox.Text = "Utilization Time";
             // 
-            // dataGridView1
+            // utilizationDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.utilizationDataGridView.AllowUserToAddRows = false;
+            this.utilizationDataGridView.AllowUserToDeleteRows = false;
+            this.utilizationDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.utilizationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.utilizationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 20);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(258, 152);
-            this.dataGridView1.TabIndex = 0;
+            this.utilizationDataGridView.Location = new System.Drawing.Point(7, 20);
+            this.utilizationDataGridView.Name = "utilizationDataGridView";
+            this.utilizationDataGridView.RowHeadersVisible = false;
+            this.utilizationDataGridView.Size = new System.Drawing.Size(258, 152);
+            this.utilizationDataGridView.TabIndex = 0;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -210,15 +210,15 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // label1
+            // resultsLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(344, 19);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Results after simulating the system with ";
+            this.resultsLabel.AutoSize = true;
+            this.resultsLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultsLabel.Location = new System.Drawing.Point(9, 26);
+            this.resultsLabel.Name = "resultsLabel";
+            this.resultsLabel.Size = new System.Drawing.Size(344, 19);
+            this.resultsLabel.TabIndex = 19;
+            this.resultsLabel.Text = "Results after simulating the system with ";
             // 
             // button2
             // 
@@ -229,86 +229,86 @@
             this.button2.Text = "Next";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // probOfQueueTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(282, 552);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(100, 27);
-            this.textBox6.TabIndex = 17;
+            this.probOfQueueTextBox.Location = new System.Drawing.Point(282, 552);
+            this.probOfQueueTextBox.Name = "probOfQueueTextBox";
+            this.probOfQueueTextBox.ReadOnly = true;
+            this.probOfQueueTextBox.Size = new System.Drawing.Size(100, 27);
+            this.probOfQueueTextBox.TabIndex = 17;
             // 
-            // label6
+            // probOfWaitLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label6.Location = new System.Drawing.Point(46, 552);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(236, 19);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Probability of Waiting in Queue:";
+            this.probOfWaitLabel.AutoSize = true;
+            this.probOfWaitLabel.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.probOfWaitLabel.Location = new System.Drawing.Point(46, 552);
+            this.probOfWaitLabel.Name = "probOfWaitLabel";
+            this.probOfWaitLabel.Size = new System.Drawing.Size(236, 19);
+            this.probOfWaitLabel.TabIndex = 16;
+            this.probOfWaitLabel.Text = "Probability of Waiting in Queue:";
             // 
-            // textBox5
+            // maxQueueLengthTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(282, 517);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(100, 27);
-            this.textBox5.TabIndex = 15;
+            this.maxQueueLengthTextBox.Location = new System.Drawing.Point(282, 517);
+            this.maxQueueLengthTextBox.Name = "maxQueueLengthTextBox";
+            this.maxQueueLengthTextBox.ReadOnly = true;
+            this.maxQueueLengthTextBox.Size = new System.Drawing.Size(100, 27);
+            this.maxQueueLengthTextBox.TabIndex = 15;
             // 
-            // label5
+            // maxQueueLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label5.Location = new System.Drawing.Point(46, 520);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 19);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Maximum Queue Length:";
+            this.maxQueueLabel.AutoSize = true;
+            this.maxQueueLabel.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.maxQueueLabel.Location = new System.Drawing.Point(46, 520);
+            this.maxQueueLabel.Name = "maxQueueLabel";
+            this.maxQueueLabel.Size = new System.Drawing.Size(188, 19);
+            this.maxQueueLabel.TabIndex = 14;
+            this.maxQueueLabel.Text = "Maximum Queue Length:";
             // 
-            // textBox4
+            // avgQueueWaitTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(282, 484);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(100, 27);
-            this.textBox4.TabIndex = 13;
+            this.avgQueueWaitTextBox.Location = new System.Drawing.Point(282, 484);
+            this.avgQueueWaitTextBox.Name = "avgQueueWaitTextBox";
+            this.avgQueueWaitTextBox.ReadOnly = true;
+            this.avgQueueWaitTextBox.Size = new System.Drawing.Size(100, 27);
+            this.avgQueueWaitTextBox.TabIndex = 13;
             // 
-            // label4
+            // avgQueueLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.label4.Location = new System.Drawing.Point(46, 487);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(223, 19);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Average Queue Waiting Time:";
+            this.avgQueueLabel.AutoSize = true;
+            this.avgQueueLabel.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.avgQueueLabel.Location = new System.Drawing.Point(46, 487);
+            this.avgQueueLabel.Name = "avgQueueLabel";
+            this.avgQueueLabel.Size = new System.Drawing.Size(223, 19);
+            this.avgQueueLabel.TabIndex = 11;
+            this.avgQueueLabel.Text = "Average Queue Waiting Time:";
             // 
-            // groupBox2
+            // avgServiceGroupBox
             // 
-            this.groupBox2.Controls.Add(this.dataGridView2);
-            this.groupBox2.Font = new System.Drawing.Font("Tahoma", 8F);
-            this.groupBox2.Location = new System.Drawing.Point(75, 78);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(278, 188);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Average Service Time";
+            this.avgServiceGroupBox.Controls.Add(this.avgServiceDataGridView);
+            this.avgServiceGroupBox.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.avgServiceGroupBox.Location = new System.Drawing.Point(75, 78);
+            this.avgServiceGroupBox.Name = "avgServiceGroupBox";
+            this.avgServiceGroupBox.Size = new System.Drawing.Size(278, 188);
+            this.avgServiceGroupBox.TabIndex = 0;
+            this.avgServiceGroupBox.TabStop = false;
+            this.avgServiceGroupBox.Text = "Average Service Time";
             // 
-            // dataGridView2
+            // avgServiceDataGridView
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.avgServiceDataGridView.AllowUserToAddRows = false;
+            this.avgServiceDataGridView.AllowUserToDeleteRows = false;
+            this.avgServiceDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.avgServiceDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.avgServiceDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ServerID,
             this.Average});
-            this.dataGridView2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.dataGridView2.Location = new System.Drawing.Point(7, 20);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.Size = new System.Drawing.Size(258, 152);
-            this.dataGridView2.TabIndex = 0;
+            this.avgServiceDataGridView.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.avgServiceDataGridView.Location = new System.Drawing.Point(7, 20);
+            this.avgServiceDataGridView.Name = "avgServiceDataGridView";
+            this.avgServiceDataGridView.RowHeadersVisible = false;
+            this.avgServiceDataGridView.Size = new System.Drawing.Size(258, 152);
+            this.avgServiceDataGridView.TabIndex = 0;
             // 
             // ServerID
             // 
@@ -323,24 +323,24 @@
             this.Average.Name = "Average";
             this.Average.ReadOnly = true;
             // 
-            // ViewChartsBTN
+            // ViewChartsButton
             // 
-            this.ViewChartsBTN.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewChartsBTN.Location = new System.Drawing.Point(843, 595);
-            this.ViewChartsBTN.Name = "ViewChartsBTN";
-            this.ViewChartsBTN.Size = new System.Drawing.Size(424, 48);
-            this.ViewChartsBTN.TabIndex = 13;
-            this.ViewChartsBTN.Text = "View Charts";
-            this.ViewChartsBTN.UseVisualStyleBackColor = true;
-            this.ViewChartsBTN.Click += new System.EventHandler(this.ViewChartsBTN_Click);
+            this.ViewChartsButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewChartsButton.Location = new System.Drawing.Point(843, 595);
+            this.ViewChartsButton.Name = "ViewChartsButton";
+            this.ViewChartsButton.Size = new System.Drawing.Size(424, 48);
+            this.ViewChartsButton.TabIndex = 13;
+            this.ViewChartsButton.Text = "View Charts";
+            this.ViewChartsButton.UseVisualStyleBackColor = true;
+            this.ViewChartsButton.Click += new System.EventHandler(this.ViewChartsBTN_Click);
             // 
             // SimulationTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 647);
-            this.Controls.Add(this.ViewChartsBTN);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.ViewChartsButton);
+            this.Controls.Add(this.InfoGroupBox);
             this.Controls.Add(this.outputDataGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -350,12 +350,12 @@
             this.Text = "Simulation Table";
             this.Load += new System.EventHandler(this.SimulationTable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.outputDataGrid)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.InfoGroupBox.ResumeLayout(false);
+            this.InfoGroupBox.PerformLayout();
+            this.utilizationGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.utilizationDataGridView)).EndInit();
+            this.avgServiceGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.avgServiceDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -363,20 +363,20 @@
         #endregion
 
         public System.Windows.Forms.DataGridView outputDataGrid;
-        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.GroupBox InfoGroupBox;
         public System.Windows.Forms.Button button2;
-        public System.Windows.Forms.TextBox textBox6;
-        public System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox textBox5;
-        public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox textBox4;
-        public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button ViewChartsBTN;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.DataGridView dataGridView1;
-        public System.Windows.Forms.DataGridView dataGridView2;
+        public System.Windows.Forms.TextBox probOfQueueTextBox;
+        public System.Windows.Forms.Label probOfWaitLabel;
+        public System.Windows.Forms.TextBox maxQueueLengthTextBox;
+        public System.Windows.Forms.Label maxQueueLabel;
+        public System.Windows.Forms.TextBox avgQueueWaitTextBox;
+        public System.Windows.Forms.Label avgQueueLabel;
+        public System.Windows.Forms.GroupBox avgServiceGroupBox;
+        private System.Windows.Forms.Button ViewChartsButton;
+        private System.Windows.Forms.Label resultsLabel;
+        public System.Windows.Forms.GroupBox utilizationGroupBox;
+        public System.Windows.Forms.DataGridView utilizationDataGridView;
+        public System.Windows.Forms.DataGridView avgServiceDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn ServerID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Average;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

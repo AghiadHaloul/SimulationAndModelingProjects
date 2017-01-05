@@ -6,22 +6,24 @@ namespace MultiChannelQueuing
 {
     public class Server
     {
-        public List<Time> serviceTime;// probability table for service time. Check slides 34&35 Lab 1.
-        int timeServiceEnds = -1; //When will the server be available next?
+        public List<Time> serviceTime;// Probability table for service time. Check slides 34&35 Lab 1.
+        int timeServiceEnds = -1;//When will the server be available next?
         int customersServed = 0;
         double serviceTimesSum = 0;
         double averageServiceTime;
 
         public static int counter = 0;
-        public Server(){
+        public Server()
+        {
             counter++;
         }
         public void SetServer()
-        {//Load from datagrid into a list
+        {
+            // Load from dataGrid into a list
             DataGridView data = null;
-            data = Program.theForm.ServrersDataGridView;
-            serviceTime = new List<Time>(Program.theForm.ServrersDataGridView.Rows.Count);
-            for (int i = 0; i < data.Rows.Count-1; i++)
+            data = Program.mainForm.servrersDataGridView;
+            serviceTime = new List<Time>(Program.mainForm.servrersDataGridView.Rows.Count);
+            for (int i = 0; i < data.Rows.Count - 1; i++)
             {
                 serviceTime.Add(new Time());
                 serviceTime[i].duration = Convert.ToInt32(data.Rows[i].Cells[0].Value);
@@ -29,13 +31,13 @@ namespace MultiChannelQueuing
             }
             serviceTime[0].cumulativeProbability = serviceTime[0].probability;
             serviceTime[0].rangeMin = 0;
-            serviceTime[0].rangeMax = Convert.ToInt32(100*(serviceTime[0].cumulativeProbability));
+            serviceTime[0].rangeMax = Convert.ToInt32(100 * (serviceTime[0].cumulativeProbability));
 
-            for (int i=1 ; i < data.Rows.Count-1; i++)
+            for (int i = 1; i < data.Rows.Count - 1; i++)
             {
-                serviceTime[i].cumulativeProbability = serviceTime[i-1].cumulativeProbability + serviceTime[i].probability;
-                serviceTime[i].rangeMin = serviceTime[i - 1].rangeMax+1;
-                serviceTime[i].rangeMax = Convert.ToInt32(100*(serviceTime[i].cumulativeProbability));
+                serviceTime[i].cumulativeProbability = serviceTime[i - 1].cumulativeProbability + serviceTime[i].probability;
+                serviceTime[i].rangeMin = serviceTime[i - 1].rangeMax + 1;
+                serviceTime[i].rangeMax = Convert.ToInt32(100 * (serviceTime[i].cumulativeProbability));
             }
         }
         public void SetTimeServiceEnds(int time)
@@ -54,11 +56,11 @@ namespace MultiChannelQueuing
         public string GetAverageServiceTime()
         {
             averageServiceTime = serviceTimesSum / customersServed;
-            return Convert.ToString(Math.Round(averageServiceTime,3));
+            return Convert.ToString(Math.Round(averageServiceTime, 3));
         }
         public double GetIdle(int totalSystemWork)
         {
-            return 1-(Convert.ToDouble(GetIServiceTimeSum())/totalSystemWork);
+            return 1 - (Convert.ToDouble(GetIServiceTimeSum()) / totalSystemWork);
         }
         public int GetIServiceTimeSum()
         {

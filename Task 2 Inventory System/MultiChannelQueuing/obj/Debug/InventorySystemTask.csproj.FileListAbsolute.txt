@@ -9,3 +9,15 @@ C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQ
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\bin\Debug\Task1Simulation.exe
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\bin\Debug\Task1Simulation.pdb
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\bin\Debug\Task1Simulation.exe.config
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\InventorySystemTask.csprojResolveAssemblyReference.cache
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\Task1Simulation.AddType.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\InventorySystemTask.Main.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\InventorySystemTask.SimulationTable.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\InventorySystemTask.Charts.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\Task1Simulation.Properties.Resources.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\obj\Debug\InventorySystemTask.csproj.GenerateResource.Cache
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\bin\Debug\Task1Simulation.exe
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 2 Inventory System\MultiChannelQueuing\bin\Debug\Task1Simulation.pdb

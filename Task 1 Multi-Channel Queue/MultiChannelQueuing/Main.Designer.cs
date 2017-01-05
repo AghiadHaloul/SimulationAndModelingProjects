@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.startSimulationButton = new System.Windows.Forms.Button();
+            this.numberOfCustomersTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.systemDGV = new System.Windows.Forms.DataGridView();
+            this.systemDataGridView = new System.Windows.Forms.DataGridView();
             this.InterarrivalTimeDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProbabilityDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ServrersDataGridView = new System.Windows.Forms.DataGridView();
+            this.servrersDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.clearServerValuesButton = new System.Windows.Forms.Button();
             this.addServerButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.clearInterArrivalTimeButton = new System.Windows.Forms.Button();
+            this.selectionMethodComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.systemDGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServrersDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.systemDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servrersDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // startSimulationButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(13, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(526, 38);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Start Simulation";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.startSimulationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startSimulationButton.Location = new System.Drawing.Point(13, 394);
+            this.startSimulationButton.Name = "startSimulationButton";
+            this.startSimulationButton.Size = new System.Drawing.Size(526, 38);
+            this.startSimulationButton.TabIndex = 5;
+            this.startSimulationButton.Text = "Start Simulation";
+            this.startSimulationButton.UseVisualStyleBackColor = true;
+            this.startSimulationButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // numberOfCustomersTextBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.textBox1.Location = new System.Drawing.Point(177, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 27);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "50";
+            this.numberOfCustomersTextBox.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.numberOfCustomersTextBox.Location = new System.Drawing.Point(177, 26);
+            this.numberOfCustomersTextBox.Name = "numberOfCustomersTextBox";
+            this.numberOfCustomersTextBox.Size = new System.Drawing.Size(79, 27);
+            this.numberOfCustomersTextBox.TabIndex = 6;
+            this.numberOfCustomersTextBox.Text = "50";
             // 
             // label1
             // 
@@ -83,17 +83,17 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Number of Customers:";
             // 
-            // systemDGV
+            // systemDataGridView
             // 
-            this.systemDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.systemDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.systemDGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.systemDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.systemDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.systemDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.InterarrivalTimeDGV,
             this.ProbabilityDGV});
-            this.systemDGV.Location = new System.Drawing.Point(6, 59);
-            this.systemDGV.Name = "systemDGV";
-            this.systemDGV.Size = new System.Drawing.Size(246, 230);
-            this.systemDGV.TabIndex = 9;
+            this.systemDataGridView.Location = new System.Drawing.Point(6, 59);
+            this.systemDataGridView.Name = "systemDataGridView";
+            this.systemDataGridView.Size = new System.Drawing.Size(246, 230);
+            this.systemDataGridView.TabIndex = 9;
             // 
             // InterarrivalTimeDGV
             // 
@@ -105,17 +105,17 @@
             this.ProbabilityDGV.HeaderText = "Probability";
             this.ProbabilityDGV.Name = "ProbabilityDGV";
             // 
-            // ServrersDataGridView
+            // servrersDataGridView
             // 
-            this.ServrersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ServrersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ServrersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.servrersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.servrersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.servrersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.ServrersDataGridView.Location = new System.Drawing.Point(6, 59);
-            this.ServrersDataGridView.Name = "ServrersDataGridView";
-            this.ServrersDataGridView.Size = new System.Drawing.Size(246, 230);
-            this.ServrersDataGridView.TabIndex = 10;
+            this.servrersDataGridView.Location = new System.Drawing.Point(6, 59);
+            this.servrersDataGridView.Name = "servrersDataGridView";
+            this.servrersDataGridView.Size = new System.Drawing.Size(246, 230);
+            this.servrersDataGridView.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -130,10 +130,10 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.clearServerValuesButton);
             this.groupBox1.Controls.Add(this.addServerButton);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.ServrersDataGridView);
+            this.groupBox1.Controls.Add(this.servrersDataGridView);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(287, 13);
             this.groupBox1.Name = "groupBox1";
@@ -151,15 +151,15 @@
             this.label7.TabIndex = 18;
             this.label7.Text = "0";
             // 
-            // button2
+            // clearServerValuesButton
             // 
-            this.button2.Location = new System.Drawing.Point(138, 295);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 30);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Clear Values";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.clearServerValuesButton.Location = new System.Drawing.Point(138, 295);
+            this.clearServerValuesButton.Name = "clearServerValuesButton";
+            this.clearServerValuesButton.Size = new System.Drawing.Size(114, 30);
+            this.clearServerValuesButton.TabIndex = 17;
+            this.clearServerValuesButton.Text = "Clear Values";
+            this.clearServerValuesButton.UseVisualStyleBackColor = true;
+            this.clearServerValuesButton.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // addServerButton
             // 
@@ -194,10 +194,10 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.clearInterArrivalTimeButton);
+            this.groupBox2.Controls.Add(this.numberOfCustomersTextBox);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.systemDGV);
+            this.groupBox2.Controls.Add(this.systemDataGridView);
             this.groupBox2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(13, 13);
             this.groupBox2.Name = "groupBox2";
@@ -206,30 +206,30 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "System Parameters";
             // 
-            // button3
+            // clearInterArrivalTimeButton
             // 
-            this.button3.Location = new System.Drawing.Point(66, 295);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 30);
-            this.button3.TabIndex = 19;
-            this.button3.Text = "Clear Values";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.clearInterArrivalTimeButton.Location = new System.Drawing.Point(66, 295);
+            this.clearInterArrivalTimeButton.Name = "clearInterArrivalTimeButton";
+            this.clearInterArrivalTimeButton.Size = new System.Drawing.Size(133, 30);
+            this.clearInterArrivalTimeButton.TabIndex = 19;
+            this.clearInterArrivalTimeButton.Text = "Clear Values";
+            this.clearInterArrivalTimeButton.UseVisualStyleBackColor = true;
+            this.clearInterArrivalTimeButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
+            // selectionMethodComboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.selectionMethodComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.selectionMethodComboBox.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.selectionMethodComboBox.FormattingEnabled = true;
+            this.selectionMethodComboBox.Items.AddRange(new object[] {
             "Highest Priority",
             "Random",
             "Lowest Utilization"});
-            this.comboBox1.Location = new System.Drawing.Point(293, 361);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(153, 27);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.selectionMethodComboBox.Location = new System.Drawing.Point(293, 361);
+            this.selectionMethodComboBox.Name = "selectionMethodComboBox";
+            this.selectionMethodComboBox.Size = new System.Drawing.Size(153, 27);
+            this.selectionMethodComboBox.TabIndex = 15;
+            this.selectionMethodComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -247,11 +247,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 449);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.selectionMethodComboBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.startSimulationButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -259,8 +259,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multi-Channel Queue";
             this.Load += new System.EventHandler(this.Main_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.systemDGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ServrersDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.systemDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.servrersDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -272,13 +272,13 @@
 
         #endregion
 
-        public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Button startSimulationButton;
+        public System.Windows.Forms.TextBox numberOfCustomersTextBox;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.DataGridView systemDGV;
+        public System.Windows.Forms.DataGridView systemDataGridView;
         public System.Windows.Forms.DataGridViewTextBoxColumn InterarrivalTimeDGV;
         public System.Windows.Forms.DataGridViewTextBoxColumn ProbabilityDGV;
-        public System.Windows.Forms.DataGridView ServrersDataGridView;
+        public System.Windows.Forms.DataGridView servrersDataGridView;
         public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         public System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         public System.Windows.Forms.GroupBox groupBox1;
@@ -287,10 +287,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button addServerButton;
         public System.Windows.Forms.Label label4;
-        public System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        public System.Windows.Forms.ComboBox selectionMethodComboBox;
+        private System.Windows.Forms.Button clearServerValuesButton;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button clearInterArrivalTimeButton;
     }
 }
 

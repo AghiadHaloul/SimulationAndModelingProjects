@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Customer.cs" />
+    <Compile Include="RandomValue.cs" />
     <Compile Include="SimulationTable.cs">
       <SubType>Form</SubType>
     </Compile>
