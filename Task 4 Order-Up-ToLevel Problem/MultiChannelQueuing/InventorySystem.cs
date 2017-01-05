@@ -136,7 +136,7 @@ namespace orderUpToLevelProblem
                 day.shortageSoFar = shortageSoFar;
                 day.alreadyOrdered = alreadyOrdered;
                 daysList.Add(day);
-                SimulationTable.AddToOutput(Program.simulationTableForm.outputDataGrid, day);
+                SimulationTableForm.AddToOutput(Program.simulationTableForm.outputDataGrid, day);
                 ColorIt(day, i);
                 endingInventoryAverage += day.endingInventory;
                 shortageQuantityAverage += day.shortageQuantity;

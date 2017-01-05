@@ -4,9 +4,9 @@ using System.Threading;
 
 namespace orderUpToLevelProblem
 {
-    public partial class SimulationTable : Form
+    public partial class SimulationTableForm : Form
     {
-        public SimulationTable()
+        public SimulationTableForm()
         {
             InitializeComponent();
         }
@@ -24,13 +24,9 @@ namespace orderUpToLevelProblem
             (day.LeadTime == 0) ? "-" : Convert.ToString(day.orderQuantity),
             (day.LeadTime == 0) ? "-" : Convert.ToString(day.randomDigitsForLeadTime),
             (day.LeadTime == 0) ? "-" : Convert.ToString(day.LeadTime),
-            //Convert.ToString(day.daysUntilOrderArrives)
             (day.daysUntilOrderArrives == 0) ? "Next day" : (day.daysUntilOrderArrives == -1) ? "Arrived" : (day.daysUntilOrderArrives < -1) ? "-" : (day.daysUntilOrderArrives == 1) ? Convert.ToString(day.daysUntilOrderArrives) + " day" : Convert.ToString(day.daysUntilOrderArrives) + " days"
-            // Convert.ToString(day.shortageSoFar),
-            //Convert.ToString(day.alreadyOrdered)
             );
         }
-        //(day.orderQuantity == -1) ? "-" : Convert.ToString(day.randomDigitsForDemand),
         private void CloseForm_Click(object sender, EventArgs e)
         {
             outputDataGrid.Rows.Clear();
@@ -39,7 +35,7 @@ namespace orderUpToLevelProblem
 
         private void ViewChartsBTN_Click(object sender, EventArgs e)
         {
-            Charts MainCharts = new Charts();
+            ChartsForm MainCharts = new ChartsForm();
             MainCharts.Show();
         }
 
@@ -47,7 +43,7 @@ namespace orderUpToLevelProblem
         {   
             for (int i = 0; i < Program.mainForm.simulation.numOfTrials; i++)
             {
-                // Add the numbers of trails to the combo box (40,50,60...)
+                // Add the numbers of trails to the comboBox (40,50,60...)
                 Program.simulationTableForm.trialsComboBox.Items.Add(i+1);
             }
             trialsComboBox.SelectedIndex = 0;

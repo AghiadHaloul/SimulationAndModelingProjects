@@ -1,6 +1,6 @@
 ﻿namespace orderUpToLevelProblem
 {
-    partial class SimulationTable
+    partial class SimulationTableForm
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@
             this.shortageQuantityAvgLabel = new System.Windows.Forms.Label();
             this.endingInventoryAvgTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.ViewChartsBTN = new System.Windows.Forms.Button();
+            this.ViewChartsButton = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.shortageQuantityAverageAllTextBox = new System.Windows.Forms.TextBox();
@@ -256,16 +256,16 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Ending Inventory Average";
             // 
-            // ViewChartsBTN
+            // ViewChartsButton
             // 
-            this.ViewChartsBTN.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewChartsBTN.Location = new System.Drawing.Point(843, 595);
-            this.ViewChartsBTN.Name = "ViewChartsBTN";
-            this.ViewChartsBTN.Size = new System.Drawing.Size(424, 48);
-            this.ViewChartsBTN.TabIndex = 13;
-            this.ViewChartsBTN.Text = "View Frequency Distribution Histogram";
-            this.ViewChartsBTN.UseVisualStyleBackColor = true;
-            this.ViewChartsBTN.Click += new System.EventHandler(this.ViewChartsBTN_Click);
+            this.ViewChartsButton.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewChartsButton.Location = new System.Drawing.Point(843, 595);
+            this.ViewChartsButton.Name = "ViewChartsButton";
+            this.ViewChartsButton.Size = new System.Drawing.Size(424, 48);
+            this.ViewChartsButton.TabIndex = 13;
+            this.ViewChartsButton.Text = "View Frequency Distribution Histogram";
+            this.ViewChartsButton.UseVisualStyleBackColor = true;
+            this.ViewChartsButton.Click += new System.EventHandler(this.ViewChartsBTN_Click);
             // 
             // groupBox2
             // 
@@ -337,19 +337,19 @@
             this.button1.Text = "Next";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // SimulationTable
+            // SimulationTableForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1277, 647);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.ViewChartsBTN);
+            this.Controls.Add(this.ViewChartsButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.outputDataGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "SimulationTable";
+            this.Name = "SimulationTableForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Simulation Table";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SimulationTable_FormClosed);
@@ -372,7 +372,7 @@
         public System.Windows.Forms.Label shortageQuantityAvgLabel;
         public System.Windows.Forms.TextBox endingInventoryAvgTextBox;
         public System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button ViewChartsBTN;
+        private System.Windows.Forms.Button ViewChartsButton;
         public System.Windows.Forms.Label trialNumberLabel;
         public System.Windows.Forms.ComboBox trialsComboBox;
         public System.Windows.Forms.Label label1;

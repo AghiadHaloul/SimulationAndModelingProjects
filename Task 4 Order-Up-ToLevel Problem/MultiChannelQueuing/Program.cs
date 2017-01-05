@@ -9,8 +9,8 @@ namespace orderUpToLevelProblem
     static class Program
     {
         public static Main mainForm = new Main();
-        public static SimulationTable simulationTableForm = new SimulationTable();
-        public static Charts MainCharts = new Charts();
+        public static SimulationTableForm simulationTableForm = new SimulationTableForm();
+        public static ChartsForm MainCharts = new ChartsForm();
         // static Form1 mainForm = new Form1();
         /// <summary>
         /// The main entry point for the application.

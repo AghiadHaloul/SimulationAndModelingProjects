@@ -26,7 +26,6 @@ namespace orderUpToLevelProblem
             int demandVal = -1;
             for (int i = 0; i < RefrigeratorInventorySystem.demandProbability.Count; i++)
             {
-
                 if (randomDigitsForDemand >= RefrigeratorInventorySystem.demandProbability[i].rangeMin && randomDigitsForDemand <= RefrigeratorInventorySystem.demandProbability[i].rangeMax)
                     demandVal = RefrigeratorInventorySystem.demandProbability[i].value;
             }

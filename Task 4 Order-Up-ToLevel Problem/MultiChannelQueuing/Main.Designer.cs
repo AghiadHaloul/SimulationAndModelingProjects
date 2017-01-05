@@ -338,7 +338,7 @@
             this.groupBox3.Size = new System.Drawing.Size(538, 73);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "LCG Parameters";
+            this.groupBox3.Text = "Linear Congruential Generator (LCG) Parameters";
             // 
             // mValueNumericUpDown
             // 

@@ -7,9 +7,9 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace orderUpToLevelProblem
 {
-    public partial class Charts : Form
+    public partial class ChartsForm : Form
     {
-        public Charts() { InitializeComponent(); }
+        public ChartsForm() { InitializeComponent(); }
 
         private void Charts_Load(object sender, EventArgs e)
         {
@@ -50,13 +50,13 @@ namespace orderUpToLevelProblem
             for (int i = 0, j = 0; i < points.Count; i++)
             {
                 // Add point value.
-                chart1.Series["ColumnChart"].Points.AddY(points[i].Item2);
+                chart.Series["ColumnChart"].Points.AddY(points[i].Item2);
                 // Add a label to the column.
-                chart1.Series["ColumnChart"].Points[j++].AxisLabel = points[i].Item1.ToString("0 Units");
+                chart.Series["ColumnChart"].Points[j++].AxisLabel = points[i].Item1.ToString("0 Units");
             }
             // Add axis titles.
-            chart1.ChartAreas["ChartArea1"].AxisX.Title = "Ending Inventory Value (Units)";
-            chart1.ChartAreas["ChartArea1"].AxisY.Title = "Count of Repetition (Days)";
+            chart.ChartAreas["ChartArea1"].AxisX.Title = "Ending Inventory Value (Units)";
+            chart.ChartAreas["ChartArea1"].AxisY.Title = "Count of Repetition (Days)";
         }
 
         void loadChart()
@@ -66,10 +66,10 @@ namespace orderUpToLevelProblem
         }
         private void pie_CheckedChanged(object sender, EventArgs e)
         {
-            if (chart1.Series["ColumnChart"].ChartType == SeriesChartType.Pie)
-                chart1.Series["ColumnChart"].ChartType = SeriesChartType.Column;
+            if (chart.Series["ColumnChart"].ChartType == SeriesChartType.Pie)
+                chart.Series["ColumnChart"].ChartType = SeriesChartType.Column;
             else
-                chart1.Series["ColumnChart"].ChartType = SeriesChartType.Pie;
+                chart.Series["ColumnChart"].ChartType = SeriesChartType.Pie;
         }
     }
 }

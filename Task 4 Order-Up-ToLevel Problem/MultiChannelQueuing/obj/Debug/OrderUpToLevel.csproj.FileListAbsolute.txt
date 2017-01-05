@@ -9,13 +9,13 @@ C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4\MultiChannelQ
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\bin\Debug\Task1Simulation.exe.config
-C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
-C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\bin\Debug\Task1Simulation.exe
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\bin\Debug\Task1Simulation.pdb
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\OrderUpToLevel.csprojResolveAssemblyReference.cache
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\orderUpToLevelProblem.Main.resources
-C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\orderUpToLevelProblem.SimulationTable.resources
-C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\orderUpToLevelProblem.Charts.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\orderUpToLevelProblem.SimulationTableForm.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\orderUpToLevelProblem.ChartsForm.resources
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\OrderUpToLevelProblem.Properties.Resources.resources
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\OrderUpToLevel.csproj.GenerateResource.Cache
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 4 Order-Up-ToLevel Problem\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb

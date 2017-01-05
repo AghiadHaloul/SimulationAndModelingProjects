@@ -104,3 +104,6 @@ C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 1\MultiChannelQ
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 1\MultiChannelQueuing\bin\Debug\zh-cn\ZedGraph.resources.dll
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 1\MultiChannelQueuing\bin\Debug\zh-tw\ZedGraph.resources.dll
 C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 1\MultiChannelQueuing\obj\Debug\MultiChannelQueuing.Charts.resources
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 3 Multi-Channel Queue Modified\MultiChannelQueuing\bin\Debug\Task1Simulation.exe.config
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 3 Multi-Channel Queue Modified\MultiChannelQueuing\obj\Debug\Task1Simulation.exe
+C:\Users\Ghido\Documents\GitHub\MultiChannelQueueSimulation\Task 3 Multi-Channel Queue Modified\MultiChannelQueuing\obj\Debug\Task1Simulation.pdb
